@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import video from "../videos/grahamScanPreview.min.mp4" // Tell Webpack this JS file uses this image
+
 import Layout from '../components/layout'
 
 const IndexPage = () => (
@@ -10,6 +12,10 @@ const IndexPage = () => (
     <p>Now go build something great.</p>
     <Link to="/page-2/">Go to page 2</Link>
     <Link to="/page-3/">Go to page 3</Link>
+    <video width="320" height="240" loop autoPlay muted>
+      <source src={video} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
   </Layout>
 )
 
