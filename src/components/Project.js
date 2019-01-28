@@ -11,7 +11,7 @@ const Project = ({
 }) => (
   <div className='project'>
     <div className='project__video-wrapper'>
-      <video className='project__video' width="320" height="240" loop autoPlay muted>
+      <video className='project__video' loop autoPlay muted>
         <source src={video} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -25,8 +25,22 @@ const Project = ({
       {technologies.map(technology => <li className='project__technology'>{technology}</li>)}
     </ul>
     <div className='pr{ject__links'>
-      <a className='project__link' href={liveLink}>Live Demo</a>
-      <a className='project__link' href={gitLink}>Source Code</a>
+      <a 
+        target='_blank' 
+        rel='noopener noreferrer' 
+        className='project__link'
+        href={liveLink}
+      >
+        Live Demo
+      </a>
+      <a 
+        target='_blank' 
+        rel='noopener noreferrer' 
+        className='project__link'
+        href={gitLink}
+      >
+        Source Code
+      </a>
     </div>
   </div>
 );

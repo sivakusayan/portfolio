@@ -1,21 +1,15 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
 
-import video from "../videos/grahamScanPreview.min.mp4" // Tell Webpack this JS file uses this image
+import grahamScanVideo from "../videos/grahamScanPreview.min.mp4" // Tell Webpack this JS file uses this image
 
 import Layout from '../components/layout'
+import Project from '../components/Project';
+
+import GRAHAM_SCAN_COPY from '../__copy__/projects/GRAHAM_SCAN_COPY';
 
 const IndexPage = () => (
   <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-    <Link to="/page-3/">Go to page 3</Link>
-    <video width="320" height="240" loop autoPlay muted>
-      <source src={video} type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+    <Project video={grahamScanVideo} {...GRAHAM_SCAN_COPY} />
   </Layout>
 )
 

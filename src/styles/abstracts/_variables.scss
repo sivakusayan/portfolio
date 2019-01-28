@@ -1,0 +1,79 @@
+// SASS variables will be used instead of CSS variables for this application. We
+// do this as CSS colors conflict with inbuilt SASS color functions, along with the 
+// fact that we don't need the ability to programatically change the theme or 
+// reassign variables with a cascade 
+
+/*------------------------------------------------------------------
+  POSITION
+  ------------------------------------------------------------------*/
+
+$stackingLevels: (
+  bottomMost: -100,
+  bottom: -10,
+  top: 10,
+  topMost: 100,
+);
+
+/*------------------------------------------------------------------
+  LAYOUT
+  ------------------------------------------------------------------*/
+
+// Defined in multiples of a base value. Say base value = 0.5rem.
+// EX: margin(XXS) = 1 * 0.5rem = 0.5rem
+// EX: margin(M) = 4 * 0.5rem = 2rem
+//
+// NOTE: Actual base value is seen in _functions.scss
+$marginSizes: (
+  XXS: 1,
+  XS: 2,
+  S: 3,
+  M: 4,
+  L: 5,
+  XL: 6,
+  XXL: 7,
+);
+
+// Defined in multiples of a base value. Say base value = 0.5rem.
+// EX: padding(XXS) = 1 * 0.5rem = 0.5rem
+// EX: padding(M) = 4 * 0.5rem = 2rem
+//
+// NOTE: Actual base value is seen in _functions.scss
+$paddingSizes: (
+  XXS: 1,
+  XS: 2,
+  S: 3,
+  M: 4,
+  L: 5,
+  XL: 6,
+  XXL: 7,
+);
+
+/*------------------------------------------------------------------
+  DECORATIONS
+  ------------------------------------------------------------------*/
+
+$colors: (
+  white: #FBF5F3,
+  black: #0D0D21,
+  primary: #456990,
+  accent: #BC1C1C,
+);
+
+$shadows: (
+  small: 0 1px 5px rgba(0,0,0,0.1),
+  medium: 0 2px 5px rgba(0,0,0,0.2),
+  big: 0 2px 5px rgba(0,0,0,0.4),
+);
+
+// For border-radius
+$radii: (
+  small: 5px,
+  big: 50%,
+);
+
+/*------------------------------------------------------------------
+  BREAKPOINTS
+  ------------------------------------------------------------------*/
+
+  $breakpoints: (
+  );
