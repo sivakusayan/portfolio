@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import LazyLoad from 'react-lazyload';
 
 import githubIcon from '../assets/svg/github.svg';
 import liveIcon from '../assets/svg/live.svg';
@@ -14,10 +15,12 @@ const Project = ({
 }) => (
   <div className='project'>
     <div className='project__video-wrapper'>
-      <video className='project__video' loop autoPlay muted>
-        <source src={video} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <LazyLoad once offset={100}>
+        <video className='project__video' loop autoPlay muted>
+          <source src={video} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </LazyLoad>
     </div>
     <h2 className='project__title'>{title}</h2>
     <h3 className='project__subtitle'>{subtitle}</h3>
