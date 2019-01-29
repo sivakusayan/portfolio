@@ -1,0 +1,26 @@
+.link {
+  display: flex;
+  width: 45%;
+  align-content: center;
+  justify-content: space-around;
+  padding: padding(XXS) padding(XS);
+
+  background-color: color(accent);
+  border-radius: radius(small);
+  text-decoration: none;
+
+  &__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: color(white);
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: color(white);
+    font-size: 1.5rem;
+  }
+}

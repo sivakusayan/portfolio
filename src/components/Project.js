@@ -1,5 +1,8 @@
 import React from 'react'
 
+import githubIcon from '../assets/svg/github.svg';
+import liveIcon from '../assets/svg/live.svg';
+
 const Project = ({ 
   video,
   title,
@@ -16,32 +19,36 @@ const Project = ({
         Your browser does not support the video tag.
       </video>
     </div>
-    <div className='project__text'>
-      <h2 className='project__title'>{title}</h2>
-      <h3 className='project__subtitle'>{subtitle}</h3>
-      <p className='project__description'>{description}</p>
+    <h2 className='project__title'>{title}</h2>
+    <h3 className='project__subtitle'>{subtitle}</h3>
+    <div className='project__meta'>
+      <p className='project__technologies'>{technologies.join(', ')}</p>
+      <div className='project__links'>
+        <a 
+          target='_blank' 
+          rel='noopener noreferrer' 
+          className='link'
+          href={liveLink}
+        >
+          <svg className='link__icon'>
+            <use xlinkHref={`#${liveIcon.id}`} />
+          </svg>
+          <p className='link__text'>Live Demo</p>
+        </a>
+        <a 
+          target='_blank' 
+          rel='noopener noreferrer' 
+          className='link'
+          href={gitLink}
+        >
+          <svg className='link__icon'>
+            <use xlinkHref={`#${githubIcon.id}`} />
+          </svg>
+          <p className='link__text'>Source Code</p>
+        </a>
+      </div>
     </div>
-    <ul className='project__technologies'>
-      {technologies.map(technology => <li className='project__technology'>{technology}</li>)}
-    </ul>
-    <div className='pr{ject__links'>
-      <a 
-        target='_blank' 
-        rel='noopener noreferrer' 
-        className='project__link'
-        href={liveLink}
-      >
-        Live Demo
-      </a>
-      <a 
-        target='_blank' 
-        rel='noopener noreferrer' 
-        className='project__link'
-        href={gitLink}
-      >
-        Source Code
-      </a>
-    </div>
+    <p className='project__description'>{description}</p>
   </div>
 );
 

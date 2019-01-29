@@ -1,0 +1,66 @@
+.project {
+  width: 100%;
+  height: 100%;
+  padding: padding(S) padding(M);
+  color: color(black);
+
+  &__video-wrapper {
+    overflow: hidden;
+    width: 100%;
+    border-radius: radius(small);
+    margin-bottom: margin(XS);
+  }
+
+  &__video {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__title {
+    margin-bottom: margin(XXS);
+    font-size: 3rem;
+
+    &::after {
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      content: '';
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: margin(XS);
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+
+  &__meta {
+    display: flex;
+    height: 8rem;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: margin(XS);
+  }
+
+  &__technologies {
+    font-size: 1.5rem;
+
+    &::before {
+      content: 'Technologies: ';
+    }
+
+    & > li {
+      margin: 0 margin(S);
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__description {
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+  }
+}
