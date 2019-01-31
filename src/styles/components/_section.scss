@@ -1,0 +1,48 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: padding(S) padding(M);
+
+  &__title {
+    position: relative;
+    display: flex;
+    width: 60%;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: margin(XL);
+
+    font-size: 4rem;
+    text-align: center;
+    
+    // Forms a triangle with CSS. Trick taken from
+    // https://css-tricks.com/snippets/css/css-triangle/
+    &::before {
+      position: absolute;
+      bottom: -1.5rem;
+      display: block;
+      width: 20rem;
+      height: 0.5rem;
+
+      background-color: color(accent);
+      border-radius: radius(small);
+      content: '';
+    }
+    &::after {
+      position: absolute;
+      // Position at &::before's bottom + &::before's height
+      bottom: -2rem;
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 0.5rem solid color(accent);
+      border-right: 1.5rem solid transparent;
+      border-left: 1.5rem solid transparent;
+
+      content: '';
+    }
+  }
+}
