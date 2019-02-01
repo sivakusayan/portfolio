@@ -1,0 +1,62 @@
+.form {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  .btn {
+    width: 35%;
+    margin-top: margin(XS);
+  }
+}
+
+.field {
+  position: relative;
+  margin-bottom: margin(S);
+  font-size: 1.5rem;
+
+  &__name {
+    position: absolute;
+    // Notice these two numbers match with the value of padding(XS)
+    bottom: 1.1rem;
+    left: 1.1rem;
+    color: darken(color(white), 30%);
+
+    transition: all 0.2s;
+  }
+
+  &__input {
+    width: 100%;
+    padding: padding(XS);
+    border: none;
+    border-radius: radius(small);
+    box-shadow: shadow(small);
+  }
+
+  // Move field name up when input isn't empty so user can see
+  input:not([value=""]) + &__name {
+    bottom: 4.2rem;
+    color: color(black);
+  }
+}
+
+.field--text {
+  width: 47%;
+}
+
+.field--textarea {
+  width: 100%;
+  
+  .field__input {
+    height: 10rem;
+    font-family: inherit;
+    font-size: inherit;
+    letter-spacing: inherit;
+
+    &::placeholder {
+      color: darken(color(white), 30%);
+      font-size: inherit;
+    }
+  }
+}

@@ -1,15 +1,16 @@
-.links-container {
+.btn-container {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
 
-.link {
+.btn {
   display: flex;
   width: 45%;
-  align-content: center;
+  align-items: center;
   justify-content: space-around;
-  padding: padding(XXS) padding(XS);
+  padding: padding(XS) padding(XS);
+  border: none;
 
   background-color: color(accent);
   border-radius: radius(medium);
@@ -28,5 +29,10 @@
 
     color: color(white);
     font-size: 1.5rem;
+
+    // For some reason, setting these two properties to inherit
+    // doesn't quite behave as we expect. Look into this later.
+    font-family: 'PT Sans Narrow', Helvetica, Arial, sans-serif;
+    letter-spacing: 0.3px;
   }
 }

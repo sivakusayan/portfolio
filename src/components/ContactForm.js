@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import validator from 'email-validator';
 
 import InputField from './InputField';
+import emailIcon from '../assets/svg/email.svg';
 
 class ContactForm extends Component {
   state = {
@@ -39,7 +40,7 @@ class ContactForm extends Component {
   render() {
     const { name, email, message, emailIsValid } = this.state;
     return (
-      <section className='section section--contact-form'>
+      <section className='section section--form'>
         <div className='section__text'>
           <h3 className='section__title'>Get in Touch</h3>
         </div>
@@ -52,11 +53,10 @@ class ContactForm extends Component {
           />
           <InputField
             label='Email'
-            type='email'
+            type='text'
             value={email}
             onChange={this.onChangeWrapper('email')}
-            // We will use our own validation function
-            noValidate
+            pattern="banana|cherry"
           />
           <InputField
             label='Message'
@@ -64,7 +64,12 @@ class ContactForm extends Component {
             value={message}
             onChange={this.onChangeWrapper('message')}
           />
-          <button type='submit'>Send Message</button>
+          <button className='btn' type='submit'>
+            <svg className='btn__icon'>
+              <use xlinkHref={`#${emailIcon.id}`} />
+            </svg>
+            <span className='btn__text'>Send</span>
+          </button>
         </form>
       </section>
     );

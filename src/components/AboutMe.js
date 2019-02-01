@@ -15,28 +15,28 @@ const AboutMe = () => (
         <p className='about-me__description'>{ABOUT_ME_COPY.firstParagraph}</p>
         <p className='about-me__description'>{ABOUT_ME_COPY.secondParagraph}</p>
       </div>
-      <div className='links-container'>
+      <div className='btn-container'>
         <a 
           target='_blank' 
           rel='noopener noreferrer' 
-          className='link'
+          className='btn'
           href={resumeLink}
         >
-          <svg className='link__icon'>
+          <svg className='btn__icon'>
             <use xlinkHref={`#${documentIcon.id}`} />
           </svg>
-          <p className='link__text'>Resume</p>
+          <p className='btn__text'>Resume</p>
         </a>
         <a 
           target='_blank' 
           rel='noopener noreferrer' 
-          className='link'
+          className='btn'
           href={githubLink}
         >
-          <svg className='link__icon'>
+          <svg className='btn__icon'>
             <use xlinkHref={`#${githubIcon.id}`} />
           </svg>
-          <p className='link__text'>Github</p>
+          <p className='btn__text'>Github</p>
         </a>
       </div>
   </section>

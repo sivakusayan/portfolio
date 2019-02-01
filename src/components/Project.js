@@ -26,28 +26,28 @@ const Project = ({
     <h4 className='project__subtitle'>{subtitle}</h4>
     <div className='project__meta'>
       <p className='project__technologies'>{technologies.join(', ')}</p>
-      <div className='links-container'>
+      <div className='btn-container'>
         <a 
           target='_blank' 
           rel='noopener noreferrer' 
-          className='link'
+          className='btn'
           href={liveLink}
         >
-          <svg className='link__icon'>
+          <svg className='btn__icon'>
             <use xlinkHref={`#${liveIcon.id}`} />
           </svg>
-          <p className='link__text'>Live Demo</p>
+          <p className='btn__text'>Live Demo</p>
         </a>
         <a 
           target='_blank' 
           rel='noopener noreferrer' 
-          className='link'
+          className='btn'
           href={gitLink}
         >
-          <svg className='link__icon'>
+          <svg className='btn__icon'>
             <use xlinkHref={`#${githubIcon.id}`} />
           </svg>
-          <p className='link__text'>Source Code</p>
+          <p className='btn__text'>Source Code</p>
         </a>
       </div>
     </div>

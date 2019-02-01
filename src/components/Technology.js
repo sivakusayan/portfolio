@@ -12,7 +12,7 @@ const toTitleCase = (string) => {
 
 const Technology = ({ technology }) => (
   <li className='technology'>
-    <svg className='link__icon'>
+    <svg className='btn__icon'>
       <use xlinkHref={`#${technology}`} />
     </svg>
     <p className='technology__text'>{toTitleCase(technology)}</p>
