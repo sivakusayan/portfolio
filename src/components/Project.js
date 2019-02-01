@@ -26,7 +26,7 @@ const Project = ({
     <h4 className='project__subtitle'>{subtitle}</h4>
     <div className='project__meta'>
       <p className='project__technologies'>{technologies.join(', ')}</p>
-      <div className='project__links'>
+      <div className='links-container'>
         <a 
           target='_blank' 
           rel='noopener noreferrer' 

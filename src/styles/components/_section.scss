@@ -2,8 +2,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   padding: padding(S) padding(M);
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
 
   &__title {
     position: relative;
@@ -13,7 +20,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    margin-bottom: margin(XL);
+    margin-bottom: margin(XXL);
 
     font-size: 4rem;
     text-align: center;
@@ -46,3 +53,19 @@
     }
   }
 }
+
+.section:nth-child(even) {
+  background-color: color(black);
+  color: color(white);
+}
+
+.section:nth-child(odd) {
+  background-color: color(white);
+  color: color(black);
+}
+
+/*------------------------------------------------------------------
+  SPECIFIC SECTIONS
+  ------------------------------------------------------------------*/
+
+.section--about-me { height: 60rem; }

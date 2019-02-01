@@ -12,7 +12,7 @@ import SCHEDULE_MAKER_COPY from '../__copy__/projects/SCHEDULE_MAKER_COPY';
 
 const IndexPage = () => (
   <Layout>
-    <section className='section'>
+    <section className='section section--projects'>
       <h2 className='section__title'>Projects</h2>
       <Project video={grahamScanVideo} {...GRAHAM_SCAN_COPY} />
       <Project video={scheduleMakerVideo} {...SCHEDULE_MAKER_COPY} />

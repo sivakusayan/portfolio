@@ -1,0 +1,10 @@
+.about-me {
+  &__description {
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    
+    &:not(:last-child) {
+      margin-bottom: margin(XS);
+    }
+  }
+}
