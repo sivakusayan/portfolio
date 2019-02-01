@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import validator from 'email-validator';
 
-import InputField from './InputField';
+import InputField from '../components/InputField';
 import emailIcon from '../assets/svg/email.svg';
 
 class ContactForm extends Component {
