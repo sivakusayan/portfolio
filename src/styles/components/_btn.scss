@@ -12,15 +12,16 @@
   padding: padding(XS) padding(XS);
   border: none;
 
-  background-color: color(accent);
+  background-color: color(white);
   border-radius: radius(medium);
+  border: 1px solid color(accent);
   box-shadow: shadow(medium);
   text-decoration: none;
 
   &__icon {
     width: 2.5rem;
     height: 2.5rem;
-    fill: color(white);
+    fill: color(accent);
   }
 
   &__text {
@@ -28,12 +29,25 @@
     align-items: center;
     justify-content: center;
 
-    color: color(white);
+    color: color(accent);
     font-size: 1.5rem;
 
     // For some reason, setting these two properties to inherit
     // doesn't quite behave as we expect. Look into this later.
     font-family: 'PT Sans Narrow', Helvetica, Arial, sans-serif;
     letter-spacing: 0.3px;
+  }
+}
+
+.btn--emphasize {
+  background-color: color(accent);
+  color: color(white);
+
+  .btn__icon {
+    fill: color(white);
+  }
+
+  .btn__text {
+    color: color(white);
   }
 }

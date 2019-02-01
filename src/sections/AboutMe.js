@@ -19,7 +19,7 @@ const AboutMe = () => (
         <a 
           target='_blank' 
           rel='noopener noreferrer' 
-          className='btn'
+          className='btn btn--emphasize'
           href={resumeLink}
         >
           <svg className='btn__icon'>
@@ -30,7 +30,7 @@ const AboutMe = () => (
         <a 
           target='_blank' 
           rel='noopener noreferrer' 
-          className='btn'
+          className='btn btn--emphasize'
           href={githubLink}
         >
           <svg className='btn__icon'>

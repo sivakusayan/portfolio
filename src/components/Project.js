@@ -30,7 +30,7 @@ const Project = ({
         <a 
           target='_blank' 
           rel='noopener noreferrer' 
-          className='btn'
+          className='btn btn--emphasize'
           href={liveLink}
         >
           <svg className='btn__icon'>
