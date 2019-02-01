@@ -1,0 +1,10 @@
+.footer {
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+
+  background-color: lighten(color(black), 10%);
+  color: darken(color(white), 30%);
+  font-size: 1.2rem;
+}

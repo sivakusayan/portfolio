@@ -7,6 +7,7 @@ import Layout from '../components/layout'
 import Project from '../components/Project';
 import AboutMe from '../components/AboutMe';
 import ContactForm from '../components/ContactForm';
+import Footer from '../components/Footer';
 
 import GRAHAM_SCAN_COPY from '../__copy__/projects/GRAHAM_SCAN_COPY';
 import SCHEDULE_MAKER_COPY from '../__copy__/projects/SCHEDULE_MAKER_COPY';
@@ -20,6 +21,7 @@ const IndexPage = () => (
     </section>
     <AboutMe />
     <ContactForm />
+    <Footer />
   </Layout>
 )
 
