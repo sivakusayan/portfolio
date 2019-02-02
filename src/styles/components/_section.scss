@@ -67,6 +67,8 @@
   SPECIFIC SECTIONS
   ------------------------------------------------------------------*/
 
-.section--about-me { height: 60rem; }
+.section#header { height: 100vh; }
 
-.section--form { height: 40rem; }
+.section#about-me { height: 60rem; }
+
+.section#form { height: 40rem; }
