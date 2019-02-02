@@ -1,4 +1,5 @@
 import React from 'react';
+import Reveal from 'react-reveal/Reveal';
 
 import documentIcon from '../assets/svg/document.svg';
 import githubIcon from '../assets/svg/github.svg';
@@ -10,35 +11,37 @@ const githubLink = 'https://github.com/sivakusayan';
 
 const AboutMe = () => (
   <section className='section' id='about-me'>
-      <div className='section__text'>
-        <h3 className='section__title'>About Me</h3>
-        <p className='about-me__description'>{ABOUT_ME_COPY.firstParagraph}</p>
-        <p className='about-me__description'>{ABOUT_ME_COPY.secondParagraph}</p>
-      </div>
-      <div className='btn-container'>
-        <a 
-          target='_blank' 
-          rel='noopener noreferrer' 
-          className='btn btn--emphasize'
-          href={resumeLink}
-        >
-          <svg className='btn__icon'>
-            <use xlinkHref={`#${documentIcon.id}`} />
-          </svg>
-          <p className='btn__text'>Resume</p>
-        </a>
-        <a 
-          target='_blank' 
-          rel='noopener noreferrer' 
-          className='btn btn--emphasize'
-          href={githubLink}
-        >
-          <svg className='btn__icon'>
-            <use xlinkHref={`#${githubIcon.id}`} />
-          </svg>
-          <p className='btn__text'>Github</p>
-        </a>
-      </div>
+      <Reveal effect='fade-in'>
+        <div className='section__text'>
+          <h3 className='section__title'>About Me</h3>
+          <p className='about-me__description'>{ABOUT_ME_COPY.firstParagraph}</p>
+          <p className='about-me__description'>{ABOUT_ME_COPY.secondParagraph}</p>
+        </div>
+        <div className='btn-container'>
+          <a 
+            target='_blank' 
+            rel='noopener noreferrer' 
+            className='btn btn--emphasize'
+            href={resumeLink}
+          >
+            <svg className='btn__icon'>
+              <use xlinkHref={`#${documentIcon.id}`} />
+            </svg>
+            <p className='btn__text'>Resume</p>
+          </a>
+          <a 
+            target='_blank' 
+            rel='noopener noreferrer' 
+            className='btn btn--emphasize'
+            href={githubLink}
+          >
+            <svg className='btn__icon'>
+              <use xlinkHref={`#${githubIcon.id}`} />
+            </svg>
+            <p className='btn__text'>Github</p>
+          </a>
+        </div>
+      </Reveal>
   </section>
 );
 
