@@ -30,17 +30,6 @@ const Project = ({
         <a 
           target='_blank' 
           rel='noopener noreferrer' 
-          className='btn btn--emphasize'
-          href={liveLink}
-        >
-          <svg className='btn__icon'>
-            <use xlinkHref={`#${liveIcon.id}`} />
-          </svg>
-          <p className='btn__text'>Live Demo</p>
-        </a>
-        <a 
-          target='_blank' 
-          rel='noopener noreferrer' 
           className='btn'
           href={gitLink}
         >
@@ -48,6 +37,17 @@ const Project = ({
             <use xlinkHref={`#${githubIcon.id}`} />
           </svg>
           <p className='btn__text'>Source Code</p>
+        </a>
+        <a 
+          target='_blank' 
+          rel='noopener noreferrer' 
+          className='btn btn--emphasize'
+          href={liveLink}
+        >
+          <svg className='btn__icon'>
+            <use xlinkHref={`#${liveIcon.id}`} />
+          </svg>
+          <p className='btn__text'>Live Demo</p>
         </a>
       </div>
     </div>

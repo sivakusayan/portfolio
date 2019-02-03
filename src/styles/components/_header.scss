@@ -1,0 +1,10 @@
+.header {
+  &__title {
+    font-size: 6rem;
+    margin-bottom: margin(L);
+  }
+  &__blurb {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+}
