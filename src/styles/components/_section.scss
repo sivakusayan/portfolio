@@ -67,8 +67,22 @@
   SPECIFIC SECTIONS
   ------------------------------------------------------------------*/
 
-.section#header { height: 100vh; }
+// Make slightly taller than 100vh to have skew from section
+// below overlap, and not end awkwardly halfway.
+.section#header { height: 110vh; }
+
+// Push projects section up a bit so skew behaves as we expect
+// and the diagonal divider isn't cut off.
+.section#projects { margin-top: -5vh; }
 
 .section#about-me { height: 60rem; }
 
 .section#form { height: 40rem; }
+
+.section:not(:last-of-type) {
+  transform: skewY(-$skew);
+
+  & > * {
+    transform: skewY($skew);
+  }
+}

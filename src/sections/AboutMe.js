@@ -11,7 +11,7 @@ const githubLink = 'https://github.com/sivakusayan';
 
 const AboutMe = () => (
   <section className='section' id='about-me'>
-      <Reveal effect='fade-in'>
+      <Reveal effect='skew-fade-in'>
         <div className='section__text'>
           <h3 className='section__title'>About Me</h3>
           <p className='about-me__description'>{ABOUT_ME_COPY.firstParagraph}</p>
