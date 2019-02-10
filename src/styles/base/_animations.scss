@@ -39,27 +39,3 @@
     transform: translateY(0%);
   }
 }
-
-
-// Fade in animation for elements inside skewed containers
-.skew-fade-in {
-  animation: skew-fade-in ease-out;
-}
-
-// React Reveal doesn't seem to have capabilities to
-// control animation duration, so artificially make
-// animation shorter instead.
-@keyframes skew-fade-in {
-  0% {
-    opacity: 0;
-    transform: translateY(30%) skewY($skew);
-  }
-  70% {
-    opacity: 1;
-    transform: translateY(0%) skewY($skew);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0%) skewY($skew);
-  }
-}

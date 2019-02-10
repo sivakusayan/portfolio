@@ -28,7 +28,6 @@
   }
 
   &__subtitle {
-    margin-bottom: margin(XS);
     font-size: 2rem;
     line-height: 2.4rem;
   }
@@ -38,7 +37,7 @@
     height: 8rem;
     flex-direction: column;
     justify-content: space-around;
-    margin-bottom: margin(XS);
+    margin: margin(M) 0;
   }
 
   &__technologies {

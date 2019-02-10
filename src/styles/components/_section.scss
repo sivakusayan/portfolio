@@ -24,7 +24,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    margin: margin(XXL) 0;
+    margin-bottom: margin(XXL);
 
     font-size: 4rem;
     text-align: center;
@@ -59,7 +59,7 @@
 }
 
 .section:nth-child(even) {
-  background-color: rgba(color(black), 0.8);
+  background-color: color(black);
   color: color(white);
 }
 
@@ -68,39 +68,44 @@
   color: color(black);
 }
 
+// Create diagonal borders
+.section:not(#header) {
+  &:nth-child(even)::before {
+    background-color: color(black);
+  }
+
+  &:nth-child(odd)::before {
+    background-color: color(white);
+  }
+
+  &::before {
+    position: absolute;
+    z-index: z(bottom);
+    top: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    content: " ";
+    transform: skew(0deg, 3deg);
+    transform-origin: top right;
+  }
+}
+
 /*------------------------------------------------------------------
   SPECIFIC SECTIONS
   ------------------------------------------------------------------*/
 
 .section#header { 
   // Actual height is 100vh, but we superficially increase
-  // the height so diagonal borders appear on top of background
-  // image.
+  // the height so diagonal borders don't immediately appear in view.
   height: 110vh; 
   padding-bottom: 10vh;
 }
 
-// Pull projects up into new vacated room from header
-.section#projects { margin-top: -5vh; }
-
-.section#about-me { 
-  // Pull section below up a bit so diagonal divider shows up.
-  margin-bottom: -5vh;
-
+.section#about-me {
   .btn-container {
-    margin: margin(L) 0;
-  }
-}
-
-.section#form { 
-  // Push down to balance the section above pulling up
-  padding-top: 10vh;
-}
-
-.section:not(:last-of-type) {
-  transform: skewY(-$skew);
-
-  & > * {
-    transform: skewY($skew);
+    margin: margin(XL) 0;
   }
 }
