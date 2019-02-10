@@ -1,4 +1,9 @@
 .section {
+  // Position to be able to place sections on top of background
+  // by setting z-index.
+  position: relative;
+  z-index: z(top);
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +24,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    margin-bottom: margin(XXL);
+    margin: margin(XXL) 0;
 
     font-size: 4rem;
     text-align: center;
@@ -53,12 +58,12 @@
   }
 }
 
-.section:nth-child(odd) {
-  background-color: color(black);
+.section:nth-child(even) {
+  background-color: rgba(color(black), 0.8);
   color: color(white);
 }
 
-.section:nth-child(even) {
+.section:nth-child(odd) {
   background-color: color(white);
   color: color(black);
 }
@@ -67,19 +72,27 @@
   SPECIFIC SECTIONS
   ------------------------------------------------------------------*/
 
-.section#header { height: 100vh; }
+.section#header { 
+  // Actual height is 100vh, but we superficially increase
+  // the height so diagonal borders appear on top of background
+  // image.
+  height: 110vh; 
+  padding-bottom: 10vh;
+}
 
-// Push projects section down a bit so diagonal divider doesn't show up.
-.section#projects { margin-top: 5vh; }
+// Pull projects up into new vacated room from header
+.section#projects { margin-top: -5vh; }
 
 .section#about-me { 
-  height: 60rem; 
   // Pull section below up a bit so diagonal divider shows up.
   margin-bottom: -5vh;
+
+  .btn-container {
+    margin: margin(L) 0;
+  }
 }
 
 .section#form { 
-  height: 45rem; 
   // Push down to balance the section above pulling up
   padding-top: 10vh;
 }

@@ -1,5 +1,8 @@
 import React from 'react';
 import LazyLoad from 'react-lazyload';
+import { graphql, StaticQuery } from 'gatsby'
+
+import BackgroundImage from 'gatsby-background-image'
 
 import githubIcon from '../assets/svg/github.svg';
 import liveIcon from '../assets/svg/live.svg';

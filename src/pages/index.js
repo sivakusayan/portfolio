@@ -9,12 +9,14 @@ import Projects from '../sections/Projects';
 import AboutMe from '../sections/AboutMe';
 import ContactForm from '../sections/ContactForm';
 import Footer from '../sections/Footer';
+import Background from '../components/Background';
 
 import GRAHAM_SCAN_COPY from '../__copy__/projects/GRAHAM_SCAN_COPY';
 import SCHEDULE_MAKER_COPY from '../__copy__/projects/SCHEDULE_MAKER_COPY';
 
 const IndexPage = () => (
   <Layout>
+    <Background />
     <Header />
     <Projects />
     <AboutMe />
