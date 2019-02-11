@@ -1,4 +1,7 @@
 .header {
+  height: 110vh;
+  color: color(white);
+
   &__title {
     font-size: 6rem;
     margin-bottom: margin(L);
@@ -6,6 +9,21 @@
   &__blurb {
     font-size: 2.4rem;
     line-height: 3rem;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    z-index: z(top);
+    width: 100%;
+    height: 100%;
+    // Match content padding to section padding
+    padding: padding(XXL) padding(M);
+    padding-bottom: 10vh;
+
+    background-color: rgba(color(black), 0.8);
   }
 }
 

@@ -1,6 +1,7 @@
 .background {
   // Overwrite react inline styling
   position: fixed !important;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  // Match header height
+  height: 110vh;
 }

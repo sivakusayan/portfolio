@@ -58,23 +58,23 @@
   }
 }
 
-.section:nth-child(even) {
+.section:nth-child(odd) {
   background-color: color(black);
   color: color(white);
 }
 
-.section:nth-child(odd) {
+.section:nth-child(even) {
   background-color: color(white);
   color: color(black);
 }
 
 // Create diagonal borders
 .section:not(#header) {
-  &:nth-child(even)::before {
+  &:nth-child(odd)::before {
     background-color: color(black);
   }
 
-  &:nth-child(odd)::before {
+  &:nth-child(even)::before {
     background-color: color(white);
   }
 
@@ -98,10 +98,11 @@
   ------------------------------------------------------------------*/
 
 .section#header { 
+  display: relative;
   // Actual height is 100vh, but we superficially increase
   // the height so diagonal borders don't immediately appear in view.
-  height: 110vh; 
-  padding-bottom: 10vh;
+  height: 110vh;
+  padding: 0;
 }
 
 .section#about-me {
