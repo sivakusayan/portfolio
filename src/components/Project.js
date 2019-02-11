@@ -1,8 +1,4 @@
 import React from 'react';
-import LazyLoad from 'react-lazyload';
-import { graphql, StaticQuery } from 'gatsby'
-
-import BackgroundImage from 'gatsby-background-image'
 
 import githubIcon from '../assets/svg/github.svg';
 import liveIcon from '../assets/svg/live.svg';
@@ -18,12 +14,10 @@ const Project = ({
 }) => (
   <div className='project'>
     <div className='project__video-wrapper'>
-      <LazyLoad once offset={100}>
-        <video className='project__video' loop autoPlay muted>
-          <source src={video} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </LazyLoad>
+      <video className='project__video lazy' loop autoPlay muted>
+        <source src={video} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
     <h3 className='project__title'>{title}</h3>
     <h4 className='project__subtitle'>{subtitle}</h4>
