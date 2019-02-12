@@ -20,6 +20,12 @@ class IndexPage extends React.Component {
     // properly hook onto components
     const myLazyLoad = new LazyLoad({
       elements_selector: ".lazy",
+      // Fix for chrome data saver not letting videos autoplay
+      // https://stackoverflow.com/questions/47638344/muted-autoplay-in-chrome-still-not-working
+      callback_load: (video) => {
+        video.muted = true;
+        video.play();
+      },
     });
   }
   render() {
