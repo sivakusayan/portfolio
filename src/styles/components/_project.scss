@@ -37,19 +37,7 @@
     height: 8rem;
     flex-direction: column;
     justify-content: space-around;
-    margin: margin(M) 0;
-  }
-
-  &__technologies {
-    font-size: 1.5rem;
-
-    &::before {
-      content: 'Technologies: ';
-    }
-
-    & > li {
-      margin: 0 margin(S);
-    }
+    margin: margin(XS) 0;
   }
 
   &__links {
@@ -60,27 +48,5 @@
   &__description {
     font-size: 1.8rem;
     line-height: 2.3rem;
-  }
-}
-
-.fade-in-bottom {
-  animation: fade-in ease-out;
-}
-
-// React Reveal doesn't seem to have capabilities to
-// control animation duration, so artificially make
-// animation shorter instead.
-@keyframes fade-in-bottom {
-  0% {
-    opacity: 0;
-    transform: translateY(30%);
-  }
-  70% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
   }
 }

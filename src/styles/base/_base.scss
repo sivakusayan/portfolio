@@ -8,6 +8,16 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   scroll-behavior: smooth;
+
+  @include bp(XXS) {
+    font-size: 70%;
+  }
+  @include bp(XS) {
+    font-size: 75%;
+  }
+  @include bp(S) {
+    font-size: 85%;
+  }
 }
 
 body {

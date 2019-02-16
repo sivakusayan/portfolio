@@ -22,7 +22,6 @@ const Project = ({
     <h3 className='project__title'>{title}</h3>
     <h4 className='project__subtitle'>{subtitle}</h4>
     <div className='project__meta'>
-      <p className='project__technologies'>{technologies.join(', ')}</p>
       <div className='btn-container'>
         <a 
           target='_blank' 
