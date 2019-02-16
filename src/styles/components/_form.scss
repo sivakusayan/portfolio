@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  margin-top: margin(M);
+  margin: margin(XXL) 0;
 
   .btn {
     width: 35%;
@@ -20,7 +20,7 @@
   &__name {
     position: absolute;
     // Notice these two numbers match with the value of padding(XS)
-    bottom: 1.1rem;
+    bottom: 1.4rem;
     left: 1.1rem;
     color: darken(color(white), 30%);
 
@@ -30,14 +30,19 @@
   &__input {
     width: 100%;
     padding: padding(XS);
-    border: none;
+    border: 2px solid transparent;
     border-radius: radius(small);
     box-shadow: shadow(small);
+    transition: all 0.2s;
+
+    &.invalid:not(:focus) {
+      border: 2px solid red;
+    }
   }
 
   // Move field name up when input isn't empty so user can see
   input:not([value=""]) + &__name {
-    bottom: 4.2rem;
+    bottom: 5rem;
     color: color(black);
   }
 }

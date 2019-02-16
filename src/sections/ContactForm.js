@@ -10,8 +10,7 @@ class ContactForm extends Component {
     name: '',
     email: '',
     message: '',
-    emailIsValid: true,
-    emailIsFocused: false,
+    emailIsValid: true
   }
 
   // Make sure property is a string corresponding
@@ -34,8 +33,10 @@ class ContactForm extends Component {
     })
   }
 
-  setEmailInvalid = () => {
+  onSubmit = (e) => {
+    const isValid = this.state.emailIsValid;
 
+    if (!isValid) return e.preventDefault();
   }
 
   render() {
@@ -46,7 +47,13 @@ class ContactForm extends Component {
           <div className='section__text'>
             <h3 className='section__title'>Get in Touch</h3>
           </div>
-          <form className='form'>
+          <form 
+            name='contact'
+            method='POST'
+            netlify
+            className='form'
+            onSubmit={this.onSubmit}
+          >
             <InputField
               label='Name'
               type='text'
@@ -58,7 +65,7 @@ class ContactForm extends Component {
               type='text'
               value={email}
               onChange={this.onChangeWrapper('email')}
-              pattern="banana|cherry"
+              invalid={!emailIsValid}
             />
             <InputField
               label='Message'

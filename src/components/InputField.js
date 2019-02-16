@@ -1,6 +1,6 @@
 import React from 'react';
 
-const InputField = ({ label, type, value, onChange, pattern }) => {
+const InputField = ({ label, type, value, onChange, invalid }) => {
   if (type === 'textarea') {
     return (
       <label htmlFor={label.toLowerCase()} className='field field--textarea'>
@@ -23,10 +23,9 @@ const InputField = ({ label, type, value, onChange, pattern }) => {
         type={type}
         name={label.toLowerCase()}
         id={label.toLowerCase()}
-        className='field__input'
+        className={`field__input ${invalid ? 'invalid' : ''}`}
         value={value}
         onChange={onChange}
-        pattern={pattern}
         required
       />
       <p className='field__name'>
