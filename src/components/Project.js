@@ -19,35 +19,37 @@ const Project = ({
         Your browser does not support the video tag.
       </video>
     </div>
-    <h3 className='project__title'>{title}</h3>
-    <h4 className='project__subtitle'>{subtitle}</h4>
-    <div className='project__meta'>
-      <div className='btn-container'>
-        <a 
-          target='_blank' 
-          rel='noopener noreferrer' 
-          className='btn'
-          href={gitLink}
-        >
-          <svg className='btn__icon'>
-            <use xlinkHref={`#${githubIcon.id}`} />
-          </svg>
-          <p className='btn__text'>Source Code</p>
-        </a>
-        <a 
-          target='_blank' 
-          rel='noopener noreferrer' 
-          className='btn btn--emphasize'
-          href={liveLink}
-        >
-          <svg className='btn__icon'>
-            <use xlinkHref={`#${liveIcon.id}`} />
-          </svg>
-          <p className='btn__text'>Live Demo</p>
-        </a>
+    <div className='project__info'>
+      <h3 className='project__title'>{title}</h3>
+      <h4 className='project__subtitle'>{subtitle}</h4>
+      <div className='project__meta'>
+        <div className='btn-container'>
+          <a 
+            target='_blank' 
+            rel='noopener noreferrer' 
+            className='btn'
+            href={gitLink}
+          >
+            <svg className='btn__icon'>
+              <use xlinkHref={`#${githubIcon.id}`} />
+            </svg>
+            <p className='btn__text'>Source Code</p>
+          </a>
+          <a 
+            target='_blank' 
+            rel='noopener noreferrer' 
+            className='btn btn--emphasize'
+            href={liveLink}
+          >
+            <svg className='btn__icon'>
+              <use xlinkHref={`#${liveIcon.id}`} />
+            </svg>
+            <p className='btn__text'>Live Demo</p>
+          </a>
+        </div>
       </div>
+      <p className='project__description'>{description}</p>
     </div>
-    <p className='project__description'>{description}</p>
   </div>
 );
 

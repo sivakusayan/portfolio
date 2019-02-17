@@ -10,6 +10,14 @@
   justify-content: space-around;
   padding: padding(XXL) padding(M);
 
+  // Temporarily hardcode padding, revamp padding system later
+  @include bp(XS) {
+    padding: padding(page-S);
+  }
+  @include bp(S) {
+    padding: padding(page-M);
+  }
+
   &__text {
     display: flex;
     flex-direction: column;

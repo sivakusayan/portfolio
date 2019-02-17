@@ -3,6 +3,10 @@
   height: 100%;
   margin: margin(L) 0;
 
+  @include bp(M) {
+    display: flex;
+  }
+
   &__video-wrapper {
     overflow: hidden;
     width: 100%;
