@@ -3,10 +3,10 @@ import Reveal from 'react-reveal/Reveal';
 
 import documentIcon from '../assets/svg/document.svg';
 import githubIcon from '../assets/svg/github.svg';
+import resume from '../assets/pdf/resume.pdf';
 
 import ABOUT_ME_COPY from '../__copy__/ABOUT_ME_COPY';
 
-const resumeLink = '#';
 const githubLink = 'https://github.com/sivakusayan';
 
 const AboutMe = () => (
@@ -33,7 +33,7 @@ const AboutMe = () => (
             target='_blank' 
             rel='noopener noreferrer' 
             className='btn btn--emphasize'
-            href={resumeLink}
+            href={resume}
           >
             <svg className='btn__icon'>
               <use xlinkHref={`#${documentIcon.id}`} />

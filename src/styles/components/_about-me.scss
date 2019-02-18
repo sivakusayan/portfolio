@@ -1,10 +1,16 @@
-.about-me {
-  &__description {
+#about-me {
+  .about-me__description {
     font-size: 1.8rem;
     line-height: 2.3rem;
     
     &:not(:last-child) {
       margin-bottom: margin(XS);
+    }
+  }
+
+  .btn-container {
+    @include bp(M) {
+      width: 60%;
     }
   }
 }
