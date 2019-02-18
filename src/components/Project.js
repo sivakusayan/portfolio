@@ -2,6 +2,7 @@ import React from 'react';
 
 import githubIcon from '../assets/svg/github.svg';
 import liveIcon from '../assets/svg/live.svg';
+import LoadingIcon from './LoadingIcon';
 
 const Project = ({ 
   video,
@@ -18,6 +19,7 @@ const Project = ({
         <source src={video} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+      <LoadingIcon />
     </div>
     <div className='project__info'>
       <h3 className='project__title'>{title}</h3>

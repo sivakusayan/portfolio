@@ -15,8 +15,8 @@
   }
 
   &__video-wrapper {
+    position: relative;
     overflow: hidden;
-    width: 100%;
     margin-bottom: margin(XS);
     border-radius: radius(medium);
 
@@ -40,6 +40,17 @@
       width: 75%;
       height: 75%;
     }
+  }
+
+  &__video.loading + .loading-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__video.loaded + .loading-icon {
+    display: none;
   }
 
   &__title {
