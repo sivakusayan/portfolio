@@ -50,7 +50,7 @@ class ContactForm extends Component {
           <form 
             name='contact'
             method='POST'
-            netlify
+            data-netlify='true'
             className='form'
             onSubmit={this.onSubmit}
           >

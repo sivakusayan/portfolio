@@ -9,6 +9,7 @@
   }
 
   .btn-container {
+    // Match .section__text width
     @include bp(M) {
       width: 60%;
     }
