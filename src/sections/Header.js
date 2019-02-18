@@ -1,11 +1,8 @@
 import React from 'react';
 import Reveal from 'react-reveal/Reveal';
 
-import Background from '../components/Background';
-
 const Header = () => (
   <header className='header'>
-    <Background />
     <div className='header__content'>
       <Reveal effect='fade-in'>
         <div className='header__text'>
