@@ -2,6 +2,10 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+
+  @include bp(S) {
+    justify-content: space-around;
+  }
 }
 
 .btn {
@@ -17,6 +21,14 @@
   border: 1px solid color(accent);
   box-shadow: shadow(medium);
   text-decoration: none;
+
+  @include bp(S) {
+    width: 16rem;
+  }
+
+  @include bp(M) {
+    width: 13rem;
+  }
 
   &__icon {
     width: 2.5rem;

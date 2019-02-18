@@ -10,7 +10,6 @@
   justify-content: space-around;
   padding: padding(XXL) padding(M);
 
-  // Temporarily hardcode padding, revamp padding system later
   @include bp(XS) {
     padding: padding(page-S);
   }
@@ -111,6 +110,24 @@
   // the height so diagonal borders don't immediately appear in view.
   height: 110vh;
   padding: 0;
+}
+
+.section#projects {
+  @include bp(M) {
+    // Remember the projects are wrapped in React Reveal
+    // Pass through React Reveal container
+    & > * .project {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    & > *:nth-child(odd) .project {
+      flex-direction: row;
+    }
+    & > *:nth-child(even) .project {
+      flex-direction: row-reverse;
+    }
+  }
 }
 
 .section#about-me {
