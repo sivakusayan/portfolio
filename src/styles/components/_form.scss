@@ -6,8 +6,12 @@
   justify-content: space-between;
   margin: margin(XXL) 0;
 
+  // Match to section text width
   @include bp(M) {
     width: 60%;
+  }
+  @include bp(L) {
+    width: 45%;
   }
 
   .btn {

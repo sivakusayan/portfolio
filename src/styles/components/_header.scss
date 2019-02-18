@@ -3,6 +3,14 @@
   color: color(white);
   overflow: hidden;
 
+  &__text {
+    @include bp(M) {
+      width: 60%;
+    }
+    @include bp(L) {
+      width: 45%;
+    }
+  }
   &__title {
     font-size: 6rem;
     margin-bottom: margin(L);

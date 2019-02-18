@@ -26,6 +26,10 @@
     @include bp(M) {
       width: 60%;
     }
+
+    @include bp(L) {
+      width: 45%;
+    }
   }
 
   &__title {
