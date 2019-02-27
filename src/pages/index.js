@@ -15,8 +15,11 @@ import SCHEDULE_MAKER_COPY from '../__copy__/projects/SCHEDULE_MAKER_COPY';
 // Conditionally import LazyLoad to bypass gatsby
 // build problems.
 try {
+  // Require into dist folder to get ES5 transpiled version to work in IE
+  // https://github.com/verlok/lazyload/issues/271
+  // 
   // Var to not get block scoped
-  var LazyLoad = require('vanilla-lazyload').default;
+  var LazyLoad = require('vanilla-lazyload/dist/lazyload.js');
 } catch (e) {
   console.log('We are not in a browser environment.')
 }

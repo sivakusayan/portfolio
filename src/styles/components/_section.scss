@@ -46,29 +46,34 @@
     
     // Forms a triangle with CSS. Trick taken from
     // https://css-tricks.com/snippets/css/css-triangle/
-    &::before {
+    &::before,
+    &::after {
       position: absolute;
-      bottom: -1.5rem;
       display: block;
+      // Fix to get centering properly on IE
+      right: 50%;
+      transform: translateX(50%);
+
+      content: '';
+    }
+    // Rectangle part
+    &::before {
+      bottom: -1.5rem;
       width: 20rem;
       height: 0.5rem;
 
       background-color: color(accent);
       border-radius: radius(small);
-      content: '';
     }
+    // Triangle part
     &::after {
-      position: absolute;
       // Position at &::before's bottom + &::before's height
       bottom: -2rem;
-      display: block;
       width: 0;
       height: 0;
       border-top: 0.5rem solid color(accent);
       border-right: 1.5rem solid transparent;
       border-left: 1.5rem solid transparent;
-
-      content: '';
     }
   }
 }
@@ -97,6 +102,7 @@
     position: absolute;
     z-index: z(bottom);
     top: 0;
+    left: 0;
 
     display: block;
     width: 100%;
@@ -121,9 +127,13 @@
 }
 
 .section#projects {
+  // Remember the projects are wrapped in React Reveal
+  // Pass through React Reveal container
+  & > * {
+    height: 25%;
+    width: 100%;
+  }
   @include bp(M) {
-    // Remember the projects are wrapped in React Reveal
-    // Pass through React Reveal container
     & > * .project {
       display: flex;
       align-items: center;

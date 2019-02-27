@@ -13,6 +13,23 @@
   }
 }
 
+// Separate pulse needed to keep transform property.
+// Fix for psuedo elements not centering properly on certain browsers
+@keyframes header-pulse {
+  0% {
+    opacity: 1;
+    transform: scaleX(1) scaleY(1) translate(50%, -50%);
+  }
+  50% {
+    opacity: 0;
+    transform: scaleX(1.5) scaleY(2) translate(50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: scaleX(1.5) scaleY(2) translate(50%, -50%);
+  }
+}
+
 // We use React Reveal to manage our mounting animations as it automatically
 // applies them only when the component comes into view for us.
 // Therefore, while the animations are available here, information
