@@ -1,3 +1,7 @@
 @mixin bp($breakpoint) {
   @media only screen and (min-width: em(breakpoint($breakpoint))) {@content}
 }
+
+@mixin if-ie() {
+  @media (-ms-high-contrast: active), (-ms-high-contrast: none) {@content}
+}
