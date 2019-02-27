@@ -16,11 +16,12 @@
   padding: padding(XS);
   border: none;
 
+  border: 1px solid color(accent);
   background-color: color(white);
   border-radius: radius(medium);
-  border: 1px solid color(accent);
   box-shadow: shadow(medium);
   text-decoration: none;
+  transition: all 0.2s;
 
   @include bp(S) {
     width: 16rem;
@@ -51,6 +52,14 @@
   }
 }
 
+.btn:hover {
+  border: 1px solid darken(color(accent), 10%);
+  background-color: darken(color(white), 5%);
+  box-shadow: shadow(small);
+  cursor: pointer;
+  transform: translateY(3%);
+}
+
 .btn--emphasize,
 .btn--header {
   background-color: color(accent);
@@ -63,4 +72,23 @@
   .btn__text {
     color: color(white);
   }
+}
+
+.btn--header {
+  position: relative;
+  z-index: 0;
+  width: 14rem;
+  height: 5rem;
+  font-size: 1.7rem;
+}
+
+.btn--emphasize:hover,
+.btn--header:hover {
+  background-color: darken(color(accent), 10%);
+  border: 1px solid darken(color(accent), 10%);
+}
+
+// Cancel animation when hovering so hover animation can take place
+.btn--header:not(:hover) {
+  animation: stretch 2s ease-out infinite;
 }

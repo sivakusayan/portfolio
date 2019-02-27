@@ -14,16 +14,24 @@
   &__title {
     font-size: 6rem;
     margin-bottom: margin(L);
+
+    @include bp(M) {
+      font-size: 9rem;
+    }
   }
   &__blurb {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
     line-height: 3rem;
+
+    @include bp(M) {
+      font-weight: 300;
+    }
   }
   &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     position: relative;
     z-index: z(top);
     width: 100%;
@@ -34,33 +42,11 @@
 
     background-color: rgba(color(black), 0.8);
 
-    // Temporarily hardcode padding, revamp padding system later
     @include bp(XS) {
       padding: padding(page-S);
     }
     @include bp(S) {
       padding: padding(page-M);
     }
-  }
-}
-
-//Unique button for header
-.btn--header {
-  position: relative;
-  z-index: 0;
-  width: 12rem;
-  height: 5rem;
-  font-size: 1.7rem;
-
-  &::after {
-    position: absolute;
-    z-index: z(bottom);
-    width: 100%;
-    height: 100%;
-
-    background-color: color(accent);
-    border-radius: radius(medium);
-    content: '';
-    animation: pulse 1.8s ease-out infinite;
   }
 }
