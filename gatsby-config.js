@@ -2,12 +2,18 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Sayan Sivakumaran - Web Developer',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: "./src/assets/favicon/favicon.png",
+      }
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -18,13 +24,11 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Sayan Sivakumaran - Web Developer',
+        short_name: 'Sayan Sivakumaran',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'gatsby-icon.png', // This path is relative to the root of the site.
+        icon: './src/assets/favicon/favicon.png', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-offline',
