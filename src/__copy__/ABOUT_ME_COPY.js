@@ -1,6 +1,6 @@
-const firstParagraph = "I'm Sayan Sivakumaran, and I am a developer who makes responsive, accessible web applications and websites. Starting out as a math major, I found out how fun building programs is in my last year of university, and am now on track to get a computer science minor.";
+const firstParagraph = "I'm Sayan Sivakumaran, and I am a developer that makes responsive, cross-browser websites and applications. As someone who likes to stay organized, clean and maintainable code is one of my top priorities.";
 
-const secondParagraph = "I am passionate about making my programs as easy to use, both for the coder and the end user. To implement this, I spent time learning coding best practices so that my programs are easy to work with. I have also taken interests in UX design, accessibility, and performance to make sure I treat the user well. When I'm not programming, you can find me cooking or reading."; 
+const secondParagraph = "One of my key mantras is to never stop growing. That's why I am currently trying to take my CSS to the next level (an often neglected skill for something that can quickly become complex). Accessibility is another thing I started diving into, as I believe the web should be as widely usable as possible. When I'm not coding, you can find me working on my cooking skills or gushing over food chemistry."; 
 
 const ABOUT_ME = { firstParagraph, secondParagraph };
 
