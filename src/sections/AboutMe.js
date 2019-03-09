@@ -5,7 +5,7 @@ import documentIcon from '../assets/svg/document.svg';
 import githubIcon from '../assets/svg/github.svg';
 import resume from '../assets/pdf/resume.pdf';
 
-import ABOUT_ME_COPY from '../__copy__/ABOUT_ME_COPY';
+import ABOUT_ME from '../__copy__/ABOUT_ME_COPY';
 
 const githubLink = 'https://github.com/sivakusayan';
 
@@ -13,8 +13,10 @@ const AboutMe = () => (
   <section className='section' id='about-me'>
     <div className='section__text'>
       <h3 className='section__title'>About Me</h3>
-      <p className='about-me__description'>{ABOUT_ME_COPY.firstParagraph}</p>
-      <p className='about-me__description'>{ABOUT_ME_COPY.secondParagraph}</p>
+      {/* Remember that ABOUT_ME is an array of paragraphs */}
+      {ABOUT_ME.map(paragraph => (
+        <p className='about-me__description'>{paragraph}</p>
+      ))}
     </div>
     <div className='btn-container'>
       <a 
