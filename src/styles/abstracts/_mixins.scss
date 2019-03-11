@@ -5,3 +5,7 @@
 @mixin if-ie() {
   @media (-ms-high-contrast: active), (-ms-high-contrast: none) {@content}
 }
+
+@mixin if-edge() {
+  @supports (-ms-ime-align: auto) {@content}
+}

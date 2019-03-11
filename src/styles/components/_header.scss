@@ -48,6 +48,11 @@
       // the next best thing.
       justify-content: space-around;
     }
+    @include if-edge() {
+      // IE doesn't support space-evenly, so use 
+      // the next best thing.
+      justify-content: space-around;
+    }
 
     @include bp(XS) {
       padding: padding(page-S);
