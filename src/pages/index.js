@@ -5,6 +5,7 @@ import scheduleMakerVideo from '../assets/videos/scheduleMakerPreview.min.mp4';
 import Header from '../sections/Header';
 import Layout from '../components/layout';
 import Projects from '../sections/Projects';
+import Skills from '../sections/Skills';
 import AboutMe from '../sections/AboutMe';
 import ContactForm from '../sections/ContactForm';
 import Footer from '../sections/Footer';
