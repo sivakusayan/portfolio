@@ -14,7 +14,7 @@
     padding: padding(page-S);
   }
   @include bp(S) {
-    padding: padding(page-M);
+    padding: padding(XXL) padding(page-M);
   }
 
   &__text {
@@ -90,6 +90,15 @@
 
 // Create diagonal borders
 .section:not(#header) {
+  // Skew effect from border shrinks padding on bottom
+  // Responsively restore it by adding a vw value to
+  // bottom. 
+  // We don't target last section since the footer that
+  // follows it isn't skewed.
+  &:not(:last-of-type) {
+    padding-bottom: calc(#{padding(XXL)} + 5vw);
+  }
+
   &:nth-child(odd)::before {
     background-color: color(black);
   }

@@ -47,6 +47,7 @@ class IndexPage extends React.Component {
     <Layout>
       <Header />
       <Projects />
+      <Skills />
       <AboutMe />
       <ContactForm />
       <Footer />
