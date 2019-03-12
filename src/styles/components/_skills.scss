@@ -1,0 +1,25 @@
+.skills {
+  display: flex;
+  align-items: center;
+
+  &__category {
+    width: 30%;
+    margin-right: margin(S);
+
+    text-align: right;
+  }
+
+  &__list {
+    display: flex;
+    width: 70%;
+  }
+}
+
+.skill {
+  width: 10%;
+  height: 3rem;
+  &__icon {
+    width: 100%;
+    height: 50%;
+  }
+}
