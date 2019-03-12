@@ -1,5 +1,7 @@
 import React from 'react';
 
+import SKILLS_COPY from '../__copy__/SKILLS_COPY';
+
 const Skills = () => (
   <section className='section' id='skills'>
     <h2 className='section__title'>Skills</h2>
