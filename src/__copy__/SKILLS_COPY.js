@@ -15,7 +15,7 @@ const SKILLS_COPY = {
     'JavaScript',
     'SASS',
     'CSS',
-    'HTML5',
+    'HTML',
   ],
   backend: [
     'Node.js',
