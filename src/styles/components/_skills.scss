@@ -1,4 +1,6 @@
-
+.skills-container {
+  width: 100%;
+}
 
 .skills {
   display: flex;
@@ -6,10 +8,10 @@
   padding: padding(XS);
 
   &__category {
-    width: 30%;
+    width: 20%;
     margin-right: margin(S);
 
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: right;
   }
 
@@ -22,21 +24,18 @@
 
 .skill {
   display: flex;
-  width: 7%;
-  height: 5rem;
+  width: 4.5rem;
+  height: 4.5rem;
 
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: padding(XXS);
+  margin: margin(XXS);
 
   background-color: color(white);
   border-radius: radius(small);
   color: color(black);
-
-  &:not(:last-child) {
-    margin-right: margin(XS);
-  }
 
   &__name {
     font-size: 0.5;

@@ -27,7 +27,7 @@ const SKILLS_COPY = {
     'Jest',
     'Enzyme',
   ],
-  deployment: [
+  deploy: [
     'Heroku',
     'Netlify',
   ],
