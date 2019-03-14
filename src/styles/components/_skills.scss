@@ -1,5 +1,5 @@
 .skills-container {
-  width: 100%;
+  max-width: 55rem;
 }
 
 .skills {
@@ -8,7 +8,7 @@
   padding: padding(XS);
 
   &__category {
-    width: 20%;
+    width: 7rem;
     margin-right: margin(S);
 
     font-size: 1.8rem;
@@ -17,7 +17,7 @@
 
   &__list {
     display: flex;
-    width: 70%;
+    width: calc(100% - 7rem);
     flex-wrap: wrap;
   }
 }
@@ -36,6 +36,11 @@
   background-color: color(white);
   border-radius: radius(small);
   color: color(black);
+
+  @include bp(L) {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
 
   &__name {
     font-size: 0.5;
