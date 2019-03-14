@@ -22,12 +22,21 @@
 
 .skill {
   display: flex;
-  width: 20%;
+  width: 7%;
   height: 5rem;
 
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: padding(XXS);
+
+  background-color: color(white);
+  border-radius: radius(small);
+  color: color(black);
+
+  &:not(:last-child) {
+    margin-right: margin(XS);
+  }
 
   &__name {
     font-size: 0.5;
@@ -35,8 +44,7 @@
   }
 
   &__icon {
-    width: 40%;
-    height: 50%;
+    width: 70%;
     margin-bottom: margin(XXS);
   }
 }
