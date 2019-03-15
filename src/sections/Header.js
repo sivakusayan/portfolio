@@ -6,7 +6,7 @@ const Header = () => (
     <div className='header__content'>
       <div className='header__text'>
         <h1 className='header__title'>Hi. <br/> I'm Sayan.</h1>
-        <p className='header__blurb'>I make fast, responsive, and maintainable websites. Ready to make something amazing?</p>
+        <p className='header__blurb'>I create websites that are fast, responsive, and cross-browser. Ready to make something amazing?</p>
       </div>
       <a className='btn btn--header' href='#projects'>See my Work</a>
     </div>
