@@ -55,19 +55,12 @@
 
   &__title {
     margin-bottom: margin(XXS);
-    font-size: 3rem;
-
-    &::after {
-      width: 100px;
-      height: 100px;
-      background-color: green;
-      content: '';
-    }
+    font-size: 2.8rem;
   }
 
   &__subtitle {
-    font-size: 2rem;
-    line-height: 2.4rem;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
   }
 
   &__meta {
@@ -75,7 +68,7 @@
     height: 8rem;
     flex-direction: column;
     justify-content: space-around;
-    margin: margin(XS) 0;
+    margin: margin(XXS) 0;
   }
 
   &__links {
@@ -84,7 +77,7 @@
   }
 
   &__description {
-    font-size: 1.8rem;
-    line-height: 2.3rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
   }
 }
