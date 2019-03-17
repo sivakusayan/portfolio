@@ -139,20 +139,14 @@
   // Remember the projects are wrapped in React Reveal
   // Pass through React Reveal container
   & > * {
-    height: 25%;
     width: 100%;
+    height: 25%;
   }
   @include bp(M) {
     & > * .project {
       display: flex;
       align-items: center;
       justify-content: space-around;
-    }
-    & > *:nth-child(odd) .project {
-      flex-direction: row;
-    }
-    & > *:nth-child(even) .project {
-      flex-direction: row-reverse;
     }
   }
 }
