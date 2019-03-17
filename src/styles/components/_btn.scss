@@ -4,7 +4,11 @@
   justify-content: space-between;
 
   @include bp(S) {
-    justify-content: space-around;
+    justify-content: flex-start;
+
+    & > .btn:not(:last-child) {
+      margin-right: margin(M);
+    }
   }
 }
 
