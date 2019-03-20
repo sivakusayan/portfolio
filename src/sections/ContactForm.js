@@ -42,7 +42,7 @@ class ContactForm extends Component {
   render() {
     const { name, email, message, emailIsValid } = this.state;
     return (
-      <section className='section' id='form'>
+      <section className='section' id='contact'>
         <div className='section__text'>
           <h3 className='section__title'>Get in Touch</h3>
         </div>

@@ -27,7 +27,7 @@ class Navigation extends Component {
           >
             <span className={`btn--navigation__icon ${isOpen ? 'isOpen' : ''}`} />
           </button>
-          <Menu />
+          <Menu onClick={this.toggleOpen} />
         </div>
       </>
     )

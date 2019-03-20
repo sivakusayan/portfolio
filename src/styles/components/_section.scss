@@ -99,14 +99,6 @@
     padding-bottom: calc(#{padding(XXL)} + 5vw);
   }
 
-  &:nth-child(odd)::before {
-    background-color: color(black);
-  }
-
-  &:nth-child(even)::before {
-    background-color: color(white);
-  }
-
   &::before {
     position: absolute;
     z-index: z(bottom);
@@ -120,6 +112,14 @@
     content: " ";
     transform: skew(0deg, 3deg);
     transform-origin: top right;
+  }
+
+  &:nth-child(odd)::before {
+    background-color: color(black);
+  }
+
+  &:nth-child(even)::before {
+    background-color: color(white);
   }
 }
 
