@@ -1,23 +1,21 @@
 import React from 'react';
 
+import NAV_LINKS from '../__copy__/NAV_LINKS';
+import toKebabCase from '../utils/toKebabCase';
+
 const Menu = ({ onClick }) => (
   <nav className='menu'>
     <ul className='menu__list'>
       <li className='menu__item'>
-        <a 
-          onClick={onClick} 
-          href="#projects" className="menu__link"
-        >
-          Projects
-        </a>
-        <a 
-          onClick={onClick} 
-          href="#skills" className="menu__link"
-        >
-          Skills
-        </a>
-        <a href="#about-me" className="menu__link">About Me</a>
-        <a href="#contact" className="menu__link">Contact Form</a>
+        {NAV_LINKS.map(sectionName => (
+          <a 
+            key={sectionName}
+            onClick={onClick}
+            href={`#${toKebabCase(sectionName)}`} className="menu__link"
+          >
+            {sectionName}
+          </a>
+        ))}
       </li>
     </ul>
   </nav>
