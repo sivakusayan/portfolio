@@ -100,4 +100,22 @@
 .btn--navigation {
   width: 5rem;
   height: 5rem;
+
+  // Animated hamburger icon
+  &__icon {
+    width: 100%;
+    height: 3px;
+    background-color: color(black);
+
+    &::after,
+    &::before {
+      width: 100%;
+      height: 3px;
+      background-color: color(black);
+    }
+
+    &::after {
+      top: 30%;
+    }
+  }
 }

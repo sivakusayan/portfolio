@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Menu from '../components/Menu';
+import HamburgerIcon from '../components/HamburgerIcon';
 
 class Navigation extends Component {
   state = {
@@ -25,7 +26,7 @@ class Navigation extends Component {
             onClick={this.toggleOpen}
             className='btn btn--navigation'
           >
-            <span className={`btn--navigation__icon ${isOpen ? 'isOpen' : ''}`} />
+            <HamburgerIcon />
           </button>
           <Menu onClick={this.toggleOpen} />
         </div>
