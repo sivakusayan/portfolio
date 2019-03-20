@@ -14,8 +14,13 @@ const AboutMe = () => (
     <div className='section__text'>
       <h3 className='section__title'>About Me</h3>
       {/* Remember that ABOUT_ME is an array of paragraphs */}
-      {ABOUT_ME.map(paragraph => (
-        <p className='about-me__description'>{paragraph}</p>
+      {ABOUT_ME.map((paragraph, index) => (
+        <p 
+          key={`paragraph-${index}`}
+          className='about-me__description'
+        >
+          {paragraph}
+        </p>
       ))}
     </div>
     <div className='btn-container'>
