@@ -15,7 +15,10 @@ class Navigation extends Component {
     return (
       <>
         {/* Darkens screen while navigation menu is open */}
-        <div className={`overlay ${isOpen ? 'isOpen' : ''}`} />
+        <div 
+          className={`overlay ${isOpen ? 'isOpen' : ''}`} 
+          onClick={this.toggleOpen}
+        />
         {/* Actual navigation menu */}
         <div className={`navigation ${isOpen ? 'isOpen' : ''}`}>
           <button 
