@@ -6,17 +6,16 @@ import toKebabCase from '../utils/toKebabCase';
 const Menu = ({ onClick }) => (
   <nav className='menu'>
     <ul className='menu__list'>
-      <li className='menu__item'>
-        {NAV_LINKS.map(sectionName => (
+      {NAV_LINKS.map(sectionName => (
+        <li key={sectionName} className="menu__item">
           <a 
-            key={sectionName}
             onClick={onClick}
             href={`#${toKebabCase(sectionName)}`} className="menu__link"
           >
             {sectionName}
           </a>
-        ))}
-      </li>
+        </li>
+      ))}
     </ul>
   </nav>
 );

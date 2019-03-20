@@ -1,6 +1,29 @@
 .navigation {
-  position: absolute;
+  position: fixed;
   z-index: 1000;
+  top: 0;
+  right: 0;
+  display: flex;
+  padding: padding(XS);
+
+  transform: translateX(40%);
+  transition: all 0.2s;
+  background-color: color(white);
+  
+  .btn--navigation {
+    margin-right: 2rem;
+  }
+
+  &.isOpen {
+    transform: translateX(0);
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .overlay {
