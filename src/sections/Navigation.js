@@ -26,7 +26,7 @@ class Navigation extends Component {
             onClick={this.toggleOpen}
             className='btn btn--navigation'
           >
-            <HamburgerIcon />
+            <HamburgerIcon isOpen={isOpen}/>
           </button>
           <Menu onClick={this.toggleOpen} />
         </div>
