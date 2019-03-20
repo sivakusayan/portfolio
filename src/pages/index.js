@@ -2,8 +2,9 @@ import React from 'react';
 import grahamScanVideo from '../assets/videos/grahamScanPreview.min.mp4';
 import scheduleMakerVideo from '../assets/videos/scheduleMakerPreview.min.mp4';
 
-import Header from '../sections/Header';
 import Layout from '../components/layout';
+import Header from '../sections/Header';
+import Navigation from '../sections/Navigation';
 import Projects from '../sections/Projects';
 import Skills from '../sections/Skills';
 import AboutMe from '../sections/AboutMe';
@@ -46,6 +47,7 @@ class IndexPage extends React.Component {
     return (
     <Layout>
       <Header />
+      <Navigation />
       <Projects />
       <Skills />
       <AboutMe />
