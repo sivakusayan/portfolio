@@ -53,6 +53,14 @@
     // doesn't quite behave as we expect. Look into this later.
     font-family: 'PT Sans Narrow', Helvetica, Arial, sans-serif;
     letter-spacing: 0.3px;
+
+    // Responsively adds and removes text inside button
+    .not-small-screens {
+      display: none;
+      @include bp(XXS) {
+        display: inline;
+      }
+    }
   }
 }
 

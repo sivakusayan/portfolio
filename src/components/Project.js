@@ -35,7 +35,11 @@ const Project = ({
             <svg className='btn__icon'>
               <use xlinkHref={`#${githubIcon.id}`} />
             </svg>
-            <p className='btn__text'>Source Code</p>
+            <p className='btn__text'>
+              {/* Responsively make text more detailed on bigger
+                  screens. */}
+              <span className='not-small-screens'>Source&nbsp;</span>Code
+            </p>
           </a>
           <a 
             target='_blank' 
@@ -46,7 +50,11 @@ const Project = ({
             <svg className='btn__icon'>
               <use xlinkHref={`#${liveIcon.id}`} />
             </svg>
-            <p className='btn__text'>Live Demo</p>
+            <p className='btn__text'>
+              {/* Responsively make text more detailed on bigger
+                  screens. */}
+              <span className='not-small-screens'>Live&nbsp;</span>Demo
+            </p>
           </a>
         </div>
       </div>
