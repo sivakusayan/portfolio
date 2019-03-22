@@ -28,7 +28,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    background-color: color(black);
+    background-color: currentColor;
     border-radius: radius(small);
     transition: all 0.2s;
   }
