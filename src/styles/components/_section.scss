@@ -1,9 +1,4 @@
 .section {
-  // Position to be able to place sections on top of background
-  // by setting z-index.
-  position: relative;
-  z-index: z(top);
-
   display: flex;
   flex-direction: column;
   align-items: center;

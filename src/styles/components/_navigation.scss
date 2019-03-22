@@ -1,15 +1,15 @@
 .navigation {
   position: fixed;
-  z-index: 1000;
+  z-index: z(topMost);
   top: 0;
   right: 0;
   display: flex;
   width: 15rem;
   height: 0;
 
+  background-color: color(white);
   transform: translateX(10rem);
   transition: all 0.2s;
-  background-color: color(white);
 
   &.hide {
     transform: translateX(100%);
@@ -22,10 +22,12 @@
 
 .menu {
   position: relative;
-  z-index: 10;
+  z-index: z(top);
+
   width: 10rem;
-  padding: padding(S);
   height: 100vh;
+  padding: padding(S);
+  
   background-color: color(white);
 
   &__list {
@@ -36,7 +38,7 @@
 
 .overlay {
   position: fixed;
-  z-index: 100;
+  z-index: z(top);
   top: 0;
   left: 0;
   width: 100vw;
