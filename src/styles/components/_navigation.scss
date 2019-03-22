@@ -4,15 +4,12 @@
   top: 0;
   right: 0;
   display: flex;
-  padding: padding(XS);
+  width: 15rem;
+  height: 5rem;
 
-  transform: translateX(40%);
+  transform: translateX(10rem);
   transition: all 0.2s;
   background-color: color(white);
-  
-  .btn--navigation {
-    margin-right: 2rem;
-  }
 
   &.hide {
     transform: translateX(100%);
@@ -24,6 +21,11 @@
 }
 
 .menu {
+  width: 10rem;
+  padding: padding(S);
+  height: 100vh;
+  background-color: color(white);
+
   &__list {
     display: flex;
     flex-direction: column;
