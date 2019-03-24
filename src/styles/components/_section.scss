@@ -1,4 +1,8 @@
 .section {
+  // Code to place diagonal borders above section
+  position: relative;
+  z-index: z(above);
+
   display: flex;
   flex-direction: column;
   align-items: center;

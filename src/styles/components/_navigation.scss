@@ -4,11 +4,12 @@
   top: 0;
   right: 0;
   display: flex;
-  width: 15rem;
+  width: 20rem;
   height: 0;
 
   background-color: color(white);
-  transform: translateX(10rem);
+  // Width to right equal to menu width
+  transform: translateX(calc(100% - 5rem));
   transition: all 0.2s;
 
   &.hide {
@@ -24,7 +25,8 @@
   position: relative;
   z-index: z(top);
 
-  width: 10rem;
+  // Take entire width and subtract nav button width
+  width: calc(100% - 5rem);
   height: 100vh;
   padding: padding(S);
   
@@ -33,6 +35,20 @@
   &__list {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item {
+    width: 80%;
+    margin-bottom: 1.5em;
+    font-size: 2rem;
+  }
+
+  &__link {
+    color: color(black);
+    text-decoration: none;
+    font-weight: 800;
   }
 }
 
