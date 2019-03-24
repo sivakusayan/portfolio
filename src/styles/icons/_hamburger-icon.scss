@@ -20,7 +20,7 @@
   &::before {
     position: absolute;
     display: block;
-    width: 70%;
+    width: 50%;
     height: 5px;
 
     // Center all the lines
@@ -34,9 +34,9 @@
   }
 
   &::before { 
-    transform: translate(-50%, -250%)
+    transform: translate(-50%, -200%)
   }
-  &::after { transform: translate(-50%, 150%)}
+  &::after { transform: translate(-50%, 100%)}
 
   &::before,
   &::after {
