@@ -1,11 +1,16 @@
 @mixin bp($breakpoint) {
-  @media only screen and (min-width: em(breakpoint($breakpoint))) {@content}
+  @media only screen and (min-width: em(breakpoint($breakpoint))) {@content};
 }
 
 @mixin if-ie() {
-  @media (-ms-high-contrast: active), (-ms-high-contrast: none) {@content}
+  @media (-ms-high-contrast: active), (-ms-high-contrast: none) {@content};
 }
 
 @mixin if-edge() {
-  @supports (-ms-ime-align: auto) {@content}
+  @supports (-ms-ime-align: auto) {@content};
+}
+
+@mixin if-hover() {
+  // IE11 doesn't recognize (hover: hover), so check that case too
+  @media (hover: hover), (-ms-high-contrast: active), (-ms-high-contrast: none) {@content};
 }

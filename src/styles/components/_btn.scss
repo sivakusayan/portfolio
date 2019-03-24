@@ -64,12 +64,14 @@
   }
 }
 
-.btn:hover {
-  border: 1px solid darken(color(accent), 10%);
-  background-color: darken(color(white), 5%);
-  box-shadow: shadow(small);
-  cursor: pointer;
-  transform: translateY(3%);
+@include if-hover() {
+  .btn:hover {
+    border: 1px solid darken(color(accent), 10%);
+    background-color: darken(color(white), 5%);
+    box-shadow: shadow(small);
+    cursor: pointer;
+    transform: translateY(3%);
+  }
 }
 
 .btn--emphasize,
@@ -94,10 +96,12 @@
   font-size: 1.7rem;
 }
 
-.btn--emphasize:hover,
-.btn--header:hover {
-  background-color: darken(color(accent), 10%);
-  border: 1px solid darken(color(accent), 10%);
+@include if-hover() {
+  .btn--emphasize:hover,
+  .btn--header:hover {
+    background-color: darken(color(accent), 10%);
+    border: 1px solid darken(color(accent), 10%);
+  }
 }
 
 // Cancel animation when hovering so hover animation can take place
@@ -117,7 +121,9 @@
   color: color(black);
 }
 
-.btn--navigation:hover {
-  border: none;
-  transform: none;
+@include if-hover() {
+  .btn--navigation:hover {
+    border: none;
+    transform: none;
+  }
 }
