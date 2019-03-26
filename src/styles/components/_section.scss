@@ -144,8 +144,9 @@
   @include bp(M) {
     & > * .project {
       display: flex;
+      flex-direction: row-reverse;
       align-items: center;
-      justify-content: space-around;
+      justify-content: center;
     }
   }
 }
