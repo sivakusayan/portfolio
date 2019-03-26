@@ -9,8 +9,12 @@
 
   background-color: color(white);
   // Width to right equal to menu width
-  transform: translateX(calc(100% - 5rem));
+  transform: translateX(calc(100% - 5rem - 2vw));
   transition: all 0.2s;
+
+  @include bp(L) {
+    width: 30rem;
+  }
 
   &.hide {
     transform: translateX(100%);
@@ -26,7 +30,7 @@
   z-index: z(top);
 
   // Take entire width and subtract nav button width
-  width: calc(100% - 5rem);
+  width: calc(100% - 5rem - 2vw);
   height: 100vh;
   padding: padding(S);
   
