@@ -7,6 +7,13 @@
     margin: margin(XXL) 0;
   }
 
+  @include bp(M) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
   &__info {
     @include bp(M) {
       // Half of container since we switch to horizontal layout

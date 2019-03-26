@@ -141,14 +141,6 @@
     width: 100%;
     height: 25%;
   }
-  @include bp(M) {
-    & > * .project {
-      display: flex;
-      flex-direction: row-reverse;
-      align-items: center;
-      justify-content: center;
-    }
-  }
 }
 
 .section#about-me {
