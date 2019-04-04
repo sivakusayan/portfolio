@@ -22,7 +22,8 @@
     "react-reveal": "^1.2.2",
     "typeface-pt-sans": "^0.0.54",
     "typeface-pt-sans-narrow": "^0.0.71",
-    "vanilla-lazyload": "8.17.0"
+    "vanilla-lazyload": "8.17.0",
+    "viewport-units-buggyfill": "^0.6.2"
   },
   "keywords": [
     "gatsby"

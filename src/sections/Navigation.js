@@ -17,7 +17,7 @@ class Navigation extends Component {
     window.addEventListener('scroll', () => {
       // We want the menu button to come out when user is no longer
       // in the header landing page.
-      const isClickable = window.scrollY > window.innerHeight;
+      const isClickable = (window.scrollY || window.pageYOffset) > window.innerHeight;
       // Check if values are different so we don't
       // flood the browser with needless updates
       if (isClickable !== this.state.isClickable) {

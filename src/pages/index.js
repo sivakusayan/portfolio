@@ -1,6 +1,4 @@
 import React from 'react';
-import grahamScanVideo from '../assets/videos/grahamScanPreview.min.mp4';
-import scheduleMakerVideo from '../assets/videos/scheduleMakerPreview.min.mp4';
 
 import Layout from '../components/layout';
 import Header from '../sections/Header';
@@ -10,9 +8,6 @@ import Skills from '../sections/Skills';
 import AboutMe from '../sections/AboutMe';
 import ContactForm from '../sections/ContactForm';
 import Footer from '../sections/Footer';
-
-import GRAHAM_SCAN_COPY from '../__copy__/projects/GRAHAM_SCAN_COPY';
-import SCHEDULE_MAKER_COPY from '../__copy__/projects/SCHEDULE_MAKER_COPY';
 
 // Conditionally import LazyLoad to bypass gatsby
 // build problems.
@@ -25,7 +20,6 @@ try {
 } catch (e) {
   console.log('We are not in a browser environment.')
 }
-
 
 class IndexPage extends React.Component {
   componentDidMount() {
