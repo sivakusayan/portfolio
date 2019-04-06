@@ -75,7 +75,8 @@
 }
 
 .btn--emphasize,
-.btn--header {
+.btn--header,
+.btn--navigation {
   background-color: color(accent);
   color: color(white);
 
@@ -98,7 +99,8 @@
 
 @include if-hover() {
   .btn--emphasize:hover,
-  .btn--header:hover {
+  .btn--header:hover,
+  .btn--navigation:hover {
     background-color: darken(color(accent), 10%);
     border: 1px solid darken(color(accent), 10%);
   }
@@ -112,18 +114,11 @@
 .btn--navigation {
   // Needed for hamburger icon
   position: relative;
-  width: 25%;
-  padding-top: 20%;
+  min-width: 7rem;
+  min-height: 7rem;
+  width: 7vw;
+  height: 7vw;
+  margin: margin(XS);
   border: none;
-  border-radius: 0;
-  border-bottom-left-radius: radius(big);
-
-  color: color(black);
-}
-
-@include if-hover() {
-  .btn--navigation:hover {
-    border: none;
-    transform: none;
-  }
+  border-radius: radius(big);
 }
