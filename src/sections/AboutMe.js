@@ -1,5 +1,4 @@
 import React from 'react';
-import Reveal from 'react-reveal/Reveal';
 
 import documentIcon from '../assets/svg/document.svg';
 import githubIcon from '../assets/svg/github.svg';

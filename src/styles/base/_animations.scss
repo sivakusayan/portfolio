@@ -27,30 +27,3 @@
     background-color: darken(color(accent), 15%);
   }
 }
-
-// We use React Reveal to manage our mounting animations as it automatically
-// applies them only when the component comes into view for us.
-// Therefore, while the animations are available here, information
-// about which components are animated will be in the JavaScript files.
-
-.fade-in {
-  animation: fade-in ease-out;
-}
-
-// React Reveal doesn't seem to have capabilities to
-// control animation duration, so artificially make
-// animation shorter instead.
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: translateY(30%);
-  }
-  70% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}

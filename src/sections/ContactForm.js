@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Reveal from 'react-reveal/Reveal';
 import validator from 'email-validator';
 
 import InputField from '../components/InputField';
