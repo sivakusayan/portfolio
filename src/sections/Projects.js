@@ -12,10 +12,12 @@ import SCHEDULE_MAKER_COPY from '../__copy__/projects/SCHEDULE_MAKER_COPY';
 
 const Projects = () => (
   <section className='section' id='projects-section'>
-    <h2 className='section__title'>Projects</h2>
+    <div className="section__content">
+      <h2 className='section__title'>Projects</h2>
       <Project video={eovisVideo} {...EOVIS_COPY} />
-    	<Project video={grahamScanVideo} {...GRAHAM_SCAN_COPY} />
+      <Project video={grahamScanVideo} {...GRAHAM_SCAN_COPY} />
       <Project video={scheduleMakerVideo} {...SCHEDULE_MAKER_COPY} />
+    </div>
   </section>
 );
 

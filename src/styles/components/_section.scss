@@ -65,11 +65,19 @@
 .section:nth-child(odd) {
   background: linear-gradient(to bottom right, color(primary), color(primary-dark)); 
   color: color(white);
+  
+  .section__title::before {
+    color: color(primary-light);
+  }
 }
 
 .section:nth-child(even) {
   background-color: color(white);
   color: color(black);
+
+  .section__title::before {
+    color: color(primary);
+  }
 }
 
 /*------------------------------------------------------------------
@@ -77,11 +85,15 @@
   ------------------------------------------------------------------*/
 
 .section#projects-section {
-  // Remember the projects are wrapped in React Reveal
-  // Pass through React Reveal container
-  & > * {
-    width: 100%;
-    height: 25%;
+  @include bp(M) {
+    .section__content {
+      width: 100%;
+    }
+  }
+  @include bp(XL) {
+    .section__content {
+      width: 80%;
+    }
   }
 }
 
