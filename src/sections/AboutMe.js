@@ -10,41 +10,43 @@ const githubLink = 'https://github.com/sivakusayan';
 
 const AboutMe = () => (
   <section className='section' id='about-me-section'>
-    <div className='section__text'>
-      <h3 className='section__title'>About Me</h3>
-      {/* Remember that ABOUT_ME is an array of paragraphs */}
-      {ABOUT_ME.map((paragraph, index) => (
-        <p 
-          key={`paragraph-${index}`}
-          className='about-me__description'
+    <div className="section__content">
+      <div className='section__text'>
+        <h3 className='section__title'>About Me</h3>
+        {/* Remember that ABOUT_ME is an array of paragraphs */}
+        {ABOUT_ME.map((paragraph, index) => (
+          <p 
+            key={`paragraph-${index}`}
+            className='about-me__description'
+          >
+            {paragraph}
+          </p>
+        ))}
+      </div>
+      <div className='btn-container'>
+        <a 
+          target='_blank' 
+          rel='noopener noreferrer' 
+          className='btn'
+          href={githubLink}
         >
-          {paragraph}
-        </p>
-      ))}
-    </div>
-    <div className='btn-container'>
-      <a 
-        target='_blank' 
-        rel='noopener noreferrer' 
-        className='btn'
-        href={githubLink}
-      >
-        <svg className='btn__icon'>
-          <use xlinkHref={`#${githubIcon.id}`} />
-        </svg>
-        <p className='btn__text'>Github</p>
-      </a>
-      <a 
-        target='_blank' 
-        rel='noopener noreferrer' 
-        className='btn btn--emphasize'
-        href={resume}
-      >
-        <svg className='btn__icon'>
-          <use xlinkHref={`#${documentIcon.id}`} />
-        </svg>
-        <p className='btn__text'>Resume</p>
-      </a>
+          <svg className='btn__icon'>
+            <use xlinkHref={`#${githubIcon.id}`} />
+          </svg>
+          <p className='btn__text'>Github</p>
+        </a>
+        <a 
+          target='_blank' 
+          rel='noopener noreferrer' 
+          className='btn btn--emphasize'
+          href={resume}
+        >
+          <svg className='btn__icon'>
+            <use xlinkHref={`#${documentIcon.id}`} />
+          </svg>
+          <p className='btn__text'>Resume</p>
+        </a>
+      </div>
     </div>
   </section>
 );

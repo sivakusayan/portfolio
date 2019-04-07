@@ -42,42 +42,44 @@ class ContactForm extends Component {
     const { name, email, message, emailIsValid } = this.state;
     return (
       <section className='section' id='contact-section'>
-        <div className='section__text'>
-          <h3 className='section__title'>Get in Touch</h3>
+        <div className="section__content">
+          <div className='section__text'>
+            <h3 className='section__title'>Contact</h3>
+          </div>
+          <form 
+            name='contact'
+            method='POST'
+            data-netlify='true'
+            className='form'
+            onSubmit={this.onSubmit}
+          >
+            <InputField
+              label='Name'
+              type='text'
+              value={name}
+              onChange={this.onChangeWrapper('name')}
+            />
+            <InputField
+              label='Email'
+              type='text'
+              value={email}
+              onChange={this.onChangeWrapper('email')}
+              invalid={!emailIsValid}
+            />
+            <InputField
+              label='Message'
+              type='textarea'
+              value={message}
+              onChange={this.onChangeWrapper('message')}
+            />
+            <button className='btn btn--emphasize' type='submit'>
+              <svg className='btn__icon'>
+                <use xlinkHref={`#${contactIcon.id}`} />
+              </svg>
+              <span className='btn__text'>Send</span>
+            </button>
+          </form>
         </div>
-        <form 
-          name='contact'
-          method='POST'
-          data-netlify='true'
-          className='form'
-          onSubmit={this.onSubmit}
-        >
-          <InputField
-            label='Name'
-            type='text'
-            value={name}
-            onChange={this.onChangeWrapper('name')}
-          />
-          <InputField
-            label='Email'
-            type='text'
-            value={email}
-            onChange={this.onChangeWrapper('email')}
-            invalid={!emailIsValid}
-          />
-          <InputField
-            label='Message'
-            type='textarea'
-            value={message}
-            onChange={this.onChangeWrapper('message')}
-          />
-          <button className='btn btn--emphasize' type='submit'>
-            <svg className='btn__icon'>
-              <use xlinkHref={`#${contactIcon.id}`} />
-            </svg>
-            <span className='btn__text'>Send</span>
-          </button>
-        </form>
       </section>
     );
   }

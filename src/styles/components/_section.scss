@@ -16,28 +16,26 @@
     padding: padding(XXL) padding(page-M);
   }
 
-  &__text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-
-    @include bp(M) {
-      width: 60%;
-    }
+  &__content {
+    width: 60%;
 
     @include bp(L) {
       width: 45%;
     }
   }
 
-  &__title {
-    position: relative;
+  &__text {
     display: flex;
-
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+  }
+
+  &__title {
+    position: relative;
+    display: flex;
+    width: 100%;
+
     margin-bottom: margin(XXL);
 
     font-size: 4rem;
@@ -45,34 +43,17 @@
     
     // Forms a triangle with CSS. Trick taken from
     // https://css-tricks.com/snippets/css/css-triangle/
-    &::before,
-    &::after {
+    &::before {
       position: absolute;
       display: block;
       // Fix to get centering properly on IE
-      right: 50%;
-      transform: translateX(50%);
-
-      content: '';
-    }
-    // Rectangle part
-    &::before {
       bottom: -1.5rem;
       width: 20rem;
-      height: 0.5rem;
+      height: 0.3rem;
 
-      background-color: color(primary);
+      background-color: currentColor;
       border-radius: radius(small);
-    }
-    // Triangle part
-    &::after {
-      // Position at &::before's bottom + &::before's height
-      bottom: -2rem;
-      width: 0;
-      height: 0;
-      border-top: 0.5rem solid color(primary);
-      border-right: 1.5rem solid transparent;
-      border-left: 1.5rem solid transparent;
+      content: '';
     }
   }
 }
