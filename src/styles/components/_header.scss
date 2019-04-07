@@ -38,7 +38,7 @@
     padding: padding(XXL) padding(XXL);
     padding-bottom: 10vh;
 
-    background-color: rgba(color(black), 0.8);
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e); 
 
     @include if-ie() {
       // IE doesn't support space-evenly, so use 
