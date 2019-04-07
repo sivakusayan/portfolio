@@ -66,18 +66,17 @@
 
 @include if-hover() {
   .btn:hover {
-    border: 1px solid darken(color(primary-light), 10%);
-    background-color: darken(color(white), 5%);
-    box-shadow: shadow(small);
+    box-shadow: shadow(big);
     cursor: pointer;
-    transform: translateY(3%);
+    transform: translateY(-3%) scale(1.05);
   }
 }
 
 .btn--emphasize,
 .btn--header,
 .btn--navigation {
-  background-color: color(primary-light);
+  border: none;
+  background: linear-gradient(to bottom right, lighten(color(primary-light), 10%), color(primary-light)); 
   color: color(white);
 
   .btn__icon {
@@ -102,7 +101,6 @@
   .btn--header:hover,
   .btn--navigation:hover {
     background-color: darken(color(primary-light), 10%);
-    border: 1px solid darken(color(primary-light), 10%);
   }
 }
 
@@ -121,4 +119,10 @@
   margin: margin(XS);
   border: none;
   border-radius: radius(big);
+}
+
+@include if-hover() {
+  .btn--navigation:hover {
+    transform: scale(1.1);
+  }
 }
