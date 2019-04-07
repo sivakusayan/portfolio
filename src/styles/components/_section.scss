@@ -126,15 +126,7 @@
   SPECIFIC SECTIONS
   ------------------------------------------------------------------*/
 
-.section#header { 
-  display: relative;
-  // Actual height is 100vh, but we superficially increase
-  // the height so diagonal borders don't immediately appear in view.
-  height: 110vh;
-  padding: 0;
-}
-
-.section#projects {
+.section#projects-section {
   // Remember the projects are wrapped in React Reveal
   // Pass through React Reveal container
   & > * {
@@ -143,7 +135,7 @@
   }
 }
 
-.section#about-me {
+.section#about-me-section {
   .btn-container {
     margin: margin(XL) 0;
   }

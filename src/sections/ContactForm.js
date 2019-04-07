@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import validator from 'email-validator';
 
 import InputField from '../components/InputField';
-import emailIcon from '../assets/svg/email.svg';
+import contactIcon from '../assets/svg/contact.svg';
 
 class ContactForm extends Component {
   state = {
@@ -41,7 +41,7 @@ class ContactForm extends Component {
   render() {
     const { name, email, message, emailIsValid } = this.state;
     return (
-      <section className='section' id='contact'>
+      <section className='section' id='contact-section'>
         <div className='section__text'>
           <h3 className='section__title'>Get in Touch</h3>
         </div>
@@ -73,7 +73,7 @@ class ContactForm extends Component {
           />
           <button className='btn btn--emphasize' type='submit'>
             <svg className='btn__icon'>
-              <use xlinkHref={`#${emailIcon.id}`} />
+              <use xlinkHref={`#${contactIcon.id}`} />
             </svg>
             <span className='btn__text'>Send</span>
           </button>

@@ -9,7 +9,7 @@ import ABOUT_ME from '../__copy__/ABOUT_ME_COPY';
 const githubLink = 'https://github.com/sivakusayan';
 
 const AboutMe = () => (
-  <section className='section' id='about-me'>
+  <section className='section' id='about-me-section'>
     <div className='section__text'>
       <h3 className='section__title'>About Me</h3>
       {/* Remember that ABOUT_ME is an array of paragraphs */}

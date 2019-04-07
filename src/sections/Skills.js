@@ -5,7 +5,7 @@ import SKILLS_COPY from '../__copy__/SKILLS_COPY';
 import toTitleCase from '../utils/toTitleCase';
 
 const Skills = () => (
-  <section className='section' id='skills'>
+  <section className='section' id='skills-section'>
     <h2 className='section__title'>Skills</h2>
     <ul className='skills-container'>
       {Object.keys(SKILLS_COPY).map(category => (

@@ -11,7 +11,7 @@ import GRAHAM_SCAN_COPY from '../__copy__/projects/GRAHAM_SCAN_COPY';
 import SCHEDULE_MAKER_COPY from '../__copy__/projects/SCHEDULE_MAKER_COPY';
 
 const Projects = () => (
-  <section className='section' id='projects'>
+  <section className='section' id='projects-section'>
     <h2 className='section__title'>Projects</h2>
       <Project video={eovisVideo} {...EOVIS_COPY} />
     	<Project video={grahamScanVideo} {...GRAHAM_SCAN_COPY} />
