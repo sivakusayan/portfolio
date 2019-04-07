@@ -17,7 +17,11 @@
   }
 
   &__content {
-    width: 60%;
+    width: 100%;
+    
+    @include bp(M) {
+      width: 60%;
+    }
 
     @include bp(L) {
       width: 45%;

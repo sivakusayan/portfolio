@@ -1,23 +1,16 @@
-.skills-container {
-  max-width: 55rem;
-}
-
 .skills {
-  display: flex;
-  align-items: center;
-  padding: padding(XS);
+  margin-bottom: margin(L);
 
   &__category {
     width: 7rem;
-    margin-right: margin(S);
+    margin-bottom: margin(XXS);
 
     font-size: 1.8rem;
-    text-align: right;
   }
 
   &__list {
     display: flex;
-    width: calc(100% - 7rem);
+    width: 100%;
     flex-wrap: wrap;
   }
 }
@@ -31,7 +24,7 @@
   align-items: center;
   justify-content: center;
   padding: padding(XXS);
-  margin: margin(XXS);
+  margin: margin(XXS) margin(XS) margin(XXS) 0;
 
   background-color: color(white);
   border-radius: radius(small);
