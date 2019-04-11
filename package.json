@@ -21,6 +21,7 @@
     "react-helmet": "^5.2.0",
     "typeface-pt-sans": "^0.0.54",
     "typeface-pt-sans-narrow": "^0.0.71",
+    "typeit": "^6.0.2",
     "vanilla-lazyload": "8.17.0",
     "viewport-units-buggyfill": "^0.6.2"
   },

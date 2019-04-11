@@ -4,24 +4,34 @@
   overflow: hidden;
 
   &__text {
-    @include bp(M) {
-      width: 60%;
-    }
-    @include bp(L) {
-      width: 45%;
+    width: 100%;
+    @include bp(XL) {
+      width: 80%;
     }
   }
   &__title {
-    font-size: 6rem;
-    margin-bottom: margin(L);
+    font-size: 4rem;
+    margin-bottom: margin(XXL);
 
     @include bp(M) {
-      font-size: 9rem;
+      font-size: 8rem;
     }
   }
+  &__emphasis {
+    display: inline-block;
+    width: 100%;
+    padding: padding(XS);
+    margin-top: margin(M);
+
+    background-color: color(white);
+    border-radius: radius(small);
+    box-shadow: shadow(big);
+    color: color(primary);
+    font-size: 0.75em;
+  }
   &__blurb {
-    font-size: 2.1rem;
-    line-height: 3rem;
+    font-size: 1.8rem;
+    line-height: 1.25;
 
     @include bp(M) {
       font-weight: 300;

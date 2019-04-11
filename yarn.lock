@@ -11931,6 +11931,11 @@ typeface-pt-sans@^0.0.54:
   resolved "https://registry.yarnpkg.com/typeface-pt-sans/-/typeface-pt-sans-0.0.54.tgz#b6d5a409b2ee618b961f1116b86c421a18a7efd0"
   integrity sha512-uvf3OIiTRXBly8iXD09iNZcLndJ89iGCyzWh4YzxdL+OMXPZxROupW8OR4JYo1RRfhzCdvebE6W/KrKDnAbdmw==
 
+typeit@^6.0.2:
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/typeit/-/typeit-6.0.2.tgz#c973c97262c6f5546b9efaa469d46c17478001a1"
+  integrity sha512-nZRQmobZqasw/Z7U2vrnSA2owaKFlSI53vfKpLdFxTsBzb59cJhqRkYGrFvd8UNtyeOt82KaX+4DF5+13c2GWA==
+
 ua-parser-js@^0.7.18:
   version "0.7.19"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.19.tgz#94151be4c0a7fb1d001af7022fdaca4642659e4b"
