@@ -11,12 +11,13 @@ import Footer from '../sections/Footer';
 
 // Conditionally import LazyLoad to bypass gatsby
 // build problems.
+let LazyLoad;
 try {
   // Require into dist folder to get ES5 transpiled version to work in IE
   // https://github.com/verlok/lazyload/issues/271
   // 
   // Var to not get block scoped
-  var LazyLoad = require('vanilla-lazyload/dist/lazyload.js');
+  LazyLoad = require('vanilla-lazyload/dist/lazyload.js');
 } catch (e) {
   console.log('We are not in a browser environment.')
 }

@@ -1,16 +1,29 @@
 import React, { Component } from 'react';
 
-import TypeIt from 'typeit';
+// Conditionally import TypeIt to bypass gatsby
+// build problems.
+let TypeIt;
+try {
+  // Require into dist folder to get ES5 transpiled version to work in IE
+  // https://github.com/verlok/lazyload/issues/271
+  // 
+  // Var to not get block scoped
+  TypeIt = require('typeit');
+} catch (e) {
+  console.log('We are not in a browser environment.')
+}
 
 class Header extends Component {
   componentDidMount() {
-    const instance = new TypeIt('#typeit', {
-      strings: ['Nature Lover', 'Avid Reader'],
-      loop: true,
-      speed: 80,
-      nextStringDelay: 1800,
-      breakLines: false,
-    }).go();
+    if(TypeIt) {
+      const instance = new TypeIt('#typeit', {
+        strings: ['Nature Lover', 'Avid Reader'],
+        loop: true,
+        speed: 80,
+        nextStringDelay: 1800,
+        breakLines: false,
+      }).go();
+    }
   }
 
   render() {
