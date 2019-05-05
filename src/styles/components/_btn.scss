@@ -111,9 +111,7 @@
 
 .btn--navigation {
   // Needed for hamburger icon
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  position: relative;
   min-width: 7rem;
   min-height: 7rem;
   width: 7vw;
@@ -121,12 +119,6 @@
   margin: margin(XS);
   border: none;
   border-radius: radius(big);
-
-  // Only need button on bottom for smaller screens
-  // so thumbs can easily access
-  @include bp(XS) {
-    top: 0;
-  }
 }
 
 @include if-hover() {

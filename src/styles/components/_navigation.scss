@@ -6,9 +6,9 @@
   display: flex;
   justify-content: flex-end;
   width: calc(30rem + 2vw);
-  height: 100vh;
+  height: 0;
 
-  background: none;
+  background-color: color(white);
   transform: translateX(70%);
   transition: all 0.2s;
 
