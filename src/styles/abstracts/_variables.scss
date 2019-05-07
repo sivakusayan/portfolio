@@ -22,32 +22,33 @@ $stackingLevels: (
 
 // Defined in multiples of a base value. Say base value = 0.5rem.
 // EX: margin(XXS) = 1 * 0.5rem = 0.5rem
-// EX: margin(M) = 4 * 0.5rem = 2rem
+// EX: margin(S) = 4 * 0.5rem = 2rem
 //
 // NOTE: Actual base value is seen in _functions.scss
 $marginSizes: (
-  XXS: 1,
-  XS: 2,
-  S: 3,
+  XXS: 0.5,
+  XS: 1,
+  S: 2,
   M: 4,
-  L: 5,
-  XL: 6,
-  XXL: 7,
+  L: 6,
+  XL: 9,
+  XXL: 14,
 );
 
 // Defined in multiples of a base value. Say base value = 0.5rem.
 // EX: padding(XXS) = 1 * 0.5rem = 0.5rem
-// EX: padding(M) = 4 * 0.5rem = 2rem
+// EX: padding(S) = 4 * 0.5rem = 2rem
 //
 // NOTE: Actual base value is seen in _functions.scss
 $paddingSizes: (
-  XXS: 1,
-  XS: 2,
-  S: 3,
+  XXS: 0.5, 
+  XS: 1,
+  S: 2,
   M: 4,
-  L: 5,
-  XL: 6,
-  XXL: 7,
+  L: 6,
+  XL: 9,
+  XXL: 14,
+
   // Padding specifically for pages
   page-S: 10,
   page-M: 14,

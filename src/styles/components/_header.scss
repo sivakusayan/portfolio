@@ -10,8 +10,8 @@
     }
   }
   &__title {
+    margin-bottom: margin(M);
     font-size: 4rem;
-    margin-bottom: margin(XXL);
 
     @include bp(M) {
       font-size: 8rem;
@@ -21,7 +21,7 @@
     display: inline-block;
     width: 100%;
     padding: padding(XS);
-    margin-top: margin(M);
+    margin-top: margin(S);
 
     background-color: color(white);
     border-radius: radius(small);
@@ -45,7 +45,7 @@
     align-items: center;
     justify-content: space-evenly;
     // Match content padding to section padding
-    padding: padding(XXL) padding(XXL);
+    padding: padding(M);
     padding-bottom: 10vh;
 
     background: linear-gradient(to bottom right, color(primary), color(primary-dark)); 
@@ -62,10 +62,7 @@
     }
 
     @include bp(XS) {
-      padding: padding(page-S);
-    }
-    @include bp(S) {
-      padding: padding(page-M);
+      padding: padding(L)
     }
   }
 }

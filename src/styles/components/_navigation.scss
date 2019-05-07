@@ -51,7 +51,7 @@
     width: 100%;
     height: 100%;
     align-items: center;
-    padding-left: padding(XL);
+    padding-left: padding(M);
     border-radius: radius(small);
 
     color: color(black);
@@ -68,7 +68,7 @@
 
   &__icon {
     width: 15%;
-    margin-right: margin(M);
+    margin-right: margin(S);
     fill: color(primary-light);
   }
 }
