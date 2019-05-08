@@ -1,7 +1,7 @@
 .project {
   width: 100%;
   height: 100%;
-  margin: margin(M) 0;
+  margin: margin(XL) 0;
 
   @include bp(S) {
     margin: margin(L) 0;
@@ -12,6 +12,7 @@
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
+    margin: margin(XL) 0;
   }
 
   &__info {
