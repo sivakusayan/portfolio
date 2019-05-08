@@ -1,0 +1,18 @@
+.link {
+  display: inline-block;
+  text-decoration: none;
+  color: color(primary-light);
+  transition: all 0.2s;
+  font-weight: bold;
+
+  &:hover {
+    box-shadow: 0 3px 0 0 color(primary-light); 
+  }
+}
+
+.link:visited {
+  color: darken(color(primary-light), 10%);
+  &:hover {
+    box-shadow: 0 3px 0 0 darken(color(primary-light), 10%);
+  }
+}
