@@ -9,8 +9,10 @@
     justify-content: center;
     width: 100%;
     height: 100%;
+    @include bp(M) {
+      width: auto;
+    }
     @include bp(XL) {
-      width: 80%;
       height: 80%;
     }
   }
@@ -73,6 +75,7 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  max-width: 60rem;
   justify-content: space-between;
 
   @include bp(S) {
@@ -107,6 +110,12 @@
       flex-wrap: wrap;
       justify-content: flex-start;
     }
+
+    @include bp(S) {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   .btn {
@@ -121,6 +130,12 @@
       height: 45%;
       // Make 2.5% since 45% + 2*2.5% = 50%, perfect for two button rows.
       margin: 2.5%;
+    }
+
+    @include bp(S) {
+      width: 90%;
+      height: 30%;
+      margin: 0;
     }
 
     &__text {
@@ -139,6 +154,9 @@
         width: 3rem;
         height: 3rem;
         margin-right: margin(XS);
+      }
+      @include bp(L) {
+        margin-right: margin(S);
       }
     }
   }
