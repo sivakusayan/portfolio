@@ -1,5 +1,5 @@
 .header {
-  height: 110vh;
+  height: 100vh;
   color: color(white);
   overflow: hidden;
 
@@ -13,13 +13,18 @@
     margin-bottom: margin(M);
     font-size: 4rem;
 
+    @include bp(S) {
+      font-size: 6rem;
+      margin-bottom: margin(L);
+    }
     @include bp(M) {
       font-size: 8rem;
     }
   }
   &__emphasis {
     display: inline-block;
-    width: 100%;
+    width: 55rem;
+    max-width: 100%;
     padding: padding(XS);
     margin-top: margin(S);
 
@@ -28,14 +33,6 @@
     box-shadow: shadow(big);
     color: color(primary);
     font-size: 0.75em;
-  }
-  &__blurb {
-    font-size: 1.8rem;
-    line-height: 1.25;
-
-    @include bp(M) {
-      font-weight: 300;
-    }
   }
   &__content {  
     display: flex;
@@ -63,6 +60,30 @@
 
     @include bp(XS) {
       padding: padding(L)
+    }
+  }
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;;
+
+  @include bp(S) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__blurb {
+    font-size: 1.8rem;
+    line-height: 1.25;
+
+    @include bp(S) {
+      font-weight: 300;
+      width: 35rem;
+    }
+
+    @include bp(M) {
+      font-size: 2rem;
     }
   }
 }

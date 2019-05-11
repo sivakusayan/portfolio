@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
 
+import projectsIcon from '../assets/svg/projects.svg';
+import documentIcon from '../assets/svg/document.svg';
+import githubIcon from '../assets/svg/github.svg';
+import resume from '../assets/pdf/resume.pdf';
+
+const githubLink = 'https://github.com/sivakusayan';
+
 // Conditionally import TypeIt to bypass gatsby
 // build problems.
 let TypeIt;
@@ -36,9 +43,40 @@ class Header extends Component {
               Sivakumaran<br/>
               <span className='header__emphasis'>><span id= "typeit">Web Developer</span></span>
             </h1>
-            <p className='header__blurb'>I create websites that are fast, responsive, and cross-browser. Ready to make something amazing?</p>
+            <div className='cta'>
+              <p className='cta__blurb'>I create websites that are fast, responsive, and cross-browser. Ready to make something amazing?</p>
+              <div className="cta_btns">
+                <a className='btn btn--emphasize' href='#projects-section'>
+                  <svg className='btn__icon'>
+                    <use xlinkHref={`#${projectsIcon.id}`} />
+                  </svg>
+                  <span className='btn__text'>Projects</span>
+                </a>
+                <a 
+                  target='_blank' 
+                  rel='noopener noreferrer' 
+                  className='btn'
+                  href={resume}
+                >
+                  <svg className='btn__icon'>
+                    <use xlinkHref={`#${documentIcon.id}`} />
+                  </svg>
+                  <span className='btn__text'>Resume</span>
+                </a>
+                <a 
+                  target='_blank' 
+                  rel='noopener noreferrer' 
+                  className='btn'
+                  href={githubLink}
+                >
+                  <svg className='btn__icon'>
+                    <use xlinkHref={`#${githubIcon.id}`} />
+                  </svg>
+                  <span className='btn__text'>Github</span>
+                </a>
+              </div>
+            </div>
           </div>
-          <a className='btn btn--header' href='#projects-section'>See More</a>
         </div>
       </header>
     )
