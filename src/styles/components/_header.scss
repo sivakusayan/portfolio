@@ -4,9 +4,14 @@
   overflow: hidden;
 
   &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
+    height: 100%;
     @include bp(XL) {
       width: 80%;
+      height: 80%;
     }
   }
   &__title {
@@ -66,7 +71,9 @@
 
 .cta {
   display: flex;
-  flex-direction: column;;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
 
   @include bp(S) {
     flex-direction: row;
@@ -76,6 +83,7 @@
   &__blurb {
     font-size: 1.8rem;
     line-height: 1.25;
+    margin-bottom: margin(M);
 
     @include bp(S) {
       font-weight: 300;
@@ -84,6 +92,54 @@
 
     @include bp(M) {
       font-size: 2rem;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: center;
+
+    @include bp(XS) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+
+  .btn {
+    width: 100%;
+    height: 28%;
+    justify-content: center;
+
+    font-size: 2rem;
+
+    @include bp(XS) {
+      width: 45%;
+      height: 45%;
+      // Make 2.5% since 45% + 2*2.5% = 50%, perfect for two button rows.
+      margin: 2.5%;
+    }
+
+    &__text {
+      font-size: 2rem;
+
+      @include bp(XS) {
+        font-size: 1.8rem;
+      }
+    }
+    &__icon {
+      width: 3.5rem;
+      height: 3.5rem;
+      margin-right: margin(S);
+
+      @include bp(XS) {
+        width: 3rem;
+        height: 3rem;
+        margin-right: margin(XS);
+      }
     }
   }
 }

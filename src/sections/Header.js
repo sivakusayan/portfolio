@@ -45,7 +45,7 @@ class Header extends Component {
             </h1>
             <div className='cta'>
               <p className='cta__blurb'>I create websites that are fast, responsive, and cross-browser. Ready to make something amazing?</p>
-              <div className="cta_btns">
+              <div className="cta__btns">
                 <a className='btn btn--emphasize' href='#projects-section'>
                   <svg className='btn__icon'>
                     <use xlinkHref={`#${projectsIcon.id}`} />
