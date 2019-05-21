@@ -45,36 +45,12 @@ class Header extends Component {
             </h1>
             <div className='cta'>
               <p className='cta__blurb'>I create websites that are fast, responsive, and cross-browser. Ready to make something amazing?</p>
-              <div className="cta__btns">
-                <a className='btn btn--emphasize' href='#projects-section'>
-                  <svg className='btn__icon'>
-                    <use xlinkHref={`#${projectsIcon.id}`} />
-                  </svg>
-                  <span className='btn__text'>Projects</span>
-                </a>
-                <a 
-                  target='_blank' 
-                  rel='noopener noreferrer' 
-                  className='btn'
-                  href={resume}
-                >
-                  <svg className='btn__icon'>
-                    <use xlinkHref={`#${documentIcon.id}`} />
-                  </svg>
-                  <span className='btn__text'>Resume</span>
-                </a>
-                <a 
-                  target='_blank' 
-                  rel='noopener noreferrer' 
-                  className='btn'
-                  href={githubLink}
-                >
-                  <svg className='btn__icon'>
-                    <use xlinkHref={`#${githubIcon.id}`} />
-                  </svg>
-                  <span className='btn__text'>Github</span>
-                </a>
-              </div>
+              <a className='btn btn--emphasize' href='#projects-section'>
+                <svg className='btn__icon'>
+                  <use xlinkHref={`#${projectsIcon.id}`} />
+                </svg>
+                <span className='btn__text'>Projects</span>
+              </a>
             </div>
           </div>
         </div>
