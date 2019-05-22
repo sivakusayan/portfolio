@@ -58,7 +58,7 @@
     padding-left: padding(S);
     border-radius: radius(small);
 
-    color: color(black);
+    color: color(primary);
     text-decoration: none;
     transition: all 0.2s;
 
@@ -77,7 +77,7 @@
   &__icon {
     width: 20%;
     margin-right: margin(S);
-    fill: color(primary-light);
+    fill: color(primary);
   }
 }
 

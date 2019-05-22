@@ -57,20 +57,16 @@
 }
 
 .section:nth-child(odd) {
-  background: linear-gradient(to bottom right, color(primary), color(primary-dark)); 
-  color: color(white);
-  
-  .section__title::before {
-    color: color(primary-light);
-  }
+  background: darken(color(white), 7%); 
+  color: color(primary-dark);
 }
 
 .section:nth-child(even) {
   background-color: color(white);
-  color: color(black);
+  color: color(primary-dark);
 
   .section__title::before {
-    color: color(primary);
+    color: color(primary-dark);
   }
 }
 

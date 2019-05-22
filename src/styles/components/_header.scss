@@ -1,6 +1,6 @@
 .header {
   height: 100vh;
-  color: color(white);
+  color: color(primary-dark);
   overflow: hidden;
 
   &__text {
@@ -52,7 +52,7 @@
     padding: padding(M);
     padding-bottom: 10vh;
 
-    background: linear-gradient(to bottom right, color(primary), color(primary-dark)); 
+    background: darken(color(white), 7%); 
 
     @include if-ie() {
       // IE doesn't support space-evenly, so use 

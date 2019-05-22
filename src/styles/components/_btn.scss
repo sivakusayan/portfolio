@@ -20,7 +20,7 @@
   padding: padding(XS);
   border: none;
 
-  border: 1px solid color(primary-light);
+  border: 1px solid color(primary);
   background-color: color(white);
   border-radius: radius(small);
   box-shadow: shadow(big);
@@ -38,7 +38,7 @@
   &__icon {
     width: 2.5rem;
     height: 2.5rem;
-    fill: color(primary-light);
+    fill: color(primary);
   }
 
   &__text {
@@ -46,7 +46,7 @@
     align-items: center;
     justify-content: center;
 
-    color: color(primary-light);
+    color: color(primary);
     font-size: 1.5rem;
 
     // For some reason, setting these two properties to inherit
@@ -75,7 +75,7 @@
 .btn--emphasize,
 .btn--navigation {
   border: none;
-  background: linear-gradient(to bottom right, lighten(color(primary-light), 10%), color(primary-light)); 
+  background: linear-gradient(to bottom right, lighten(color(primary), 10%), color(primary)); 
   color: color(white);
 
   .btn__icon {
@@ -88,9 +88,8 @@
 }
 
 @include if-hover() {
-  .btn--emphasize:hover,
   .btn--navigation:hover {
-    background-color: darken(color(primary-light), 10%);
+    background-color: darken(color(primary), 10%);
   }
 }
 

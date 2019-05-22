@@ -42,7 +42,7 @@
   // Move field name up when input isn't empty so user can see
   input:not([value=""]) + &__name {
     bottom: 4.5rem;
-    color: color(white);
+    color: color(primary);
   }
 }
 
