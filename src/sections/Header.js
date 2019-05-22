@@ -44,7 +44,7 @@ class Header extends Component {
               <span className='header__emphasis'>><span id= "typeit">Web Developer</span></span>
             </h1>
             <div className='cta'>
-              <p className='cta__blurb'>I create websites that are fast, responsive, and cross-browser. Ready to make something amazing?</p>
+              <p className='cta__blurb'>I create websites that are fast, responsive, and cross-browser compatible. Ready to make something amazing?</p>
               <a className='btn btn--emphasize' href='#projects-section'>
                 <svg className='btn__icon'>
                   <use xlinkHref={`#${projectsIcon.id}`} />

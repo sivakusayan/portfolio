@@ -28,6 +28,7 @@
 
   background-color: color(white);
   border-radius: radius(small);
+  box-shadow: shadow(small);
   color: color(black);
 
   @include bp(L) {
