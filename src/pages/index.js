@@ -72,7 +72,7 @@ class IndexPage extends React.Component {
     <Layout>
       <div className={'site-container' + ((isDesktop && menuIsOpen) ? ' menu-open' : '')}>
         <Header />
-        <Navigation />
+        <Navigation isDesktop = {isDesktop} />
         <Projects />
         <Skills />
         <AboutMe />

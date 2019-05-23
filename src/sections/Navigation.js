@@ -23,6 +23,14 @@ class Navigation extends Component {
       if (isClickable !== this.state.isClickable) {
         this.setState({ isClickable });
       }
+
+      // On desktops, isOpen and isClickable are equivalent, since
+      // there will be no intermediary button to set the menu to 
+      // isOpen.
+      const { isDesktop } = this.props;
+      if (isDesktop) {
+        this.setState({ isOpen: isClickable })
+      }
     })
   }
 
@@ -31,12 +39,15 @@ class Navigation extends Component {
   }))
 
   render() {
-    const { isOpen, isClickable } = this.state
+    const { isOpen, isClickable } = this.state;
+    const { isDesktop } = this.props;
     return (
       <>
         {/* Darkens screen while navigation menu is open */}
+        {/* Only show overlay on mobile screens, since menu is 
+            always open on desktop. */}
         <div 
-          className={`overlay ${isOpen ? 'isOpen' : ''}`} 
+          className={`overlay ${(isOpen && !isDesktop) ? 'isOpen' : ''}`} 
           onClick={this.toggleOpen}
         />
         {/* Actual navigation menu */}
