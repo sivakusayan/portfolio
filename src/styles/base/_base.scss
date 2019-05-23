@@ -29,7 +29,9 @@ body {
     transition: all 1s;
   }
   &.menu-open > .section {
-    padding-right: 20%;
+    // Match the padding made to the
+    // width of the navigation menu
+    padding-right: calc(30rem + 2vw);
   }
 }
 
