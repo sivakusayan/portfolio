@@ -23,6 +23,12 @@ try {
 }
 
 class IndexPage extends React.Component {
+  state = {
+    // Used only on desktop layout for when menu pops up
+    // and shifts everything to the side
+    isDesktop: false,
+    menuIsOpen: false
+  }
   componentDidMount() {
     // Instantiate lazyload after mount so program can
     // properly hook onto components
@@ -37,17 +43,42 @@ class IndexPage extends React.Component {
         },
       });
     }
+
+    const windowWidth = window.innerWidth / parseFloat(
+      getComputedStyle(
+        document.querySelector('body')
+      )['font-size']
+    );
+    const isDesktop = windowWidth > (1000/16);
+    // Check if values are different so we don't
+    // flood the browser with needless updates
+    this.setState({ isDesktop });
+
+    window.addEventListener('scroll', () => {
+      if (!isDesktop) return;
+      // We want the menu button to come out when user is no longer
+      // in the header landing page.
+      const menuIsOpen = (window.scrollY || window.pageYOffset) > window.innerHeight;
+      // Check if values are different so we don't
+      // flood the browser with needless updates
+      if (menuIsOpen !== this.state.menuIsOpen) {
+        this.setState({ menuIsOpen });
+      }
+    })
   }
   render() {
+    const { isDesktop, menuIsOpen } = this.state;
     return (
     <Layout>
-      <Header />
-      <Navigation />
-      <Projects />
-      <Skills />
-      <AboutMe />
-      <ContactForm />
-      <Footer />
+      <div className={'site-container' + ((isDesktop && menuIsOpen) ? ' menu-open' : '')}>
+        <Header />
+        <Navigation />
+        <Projects />
+        <Skills />
+        <AboutMe />
+        <ContactForm />
+        <Footer />
+      </div>
     </Layout>
     )
   }

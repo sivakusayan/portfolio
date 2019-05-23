@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: space-around;
   padding: padding(M);
+  transition: all 0.2s;
 
   @include bp(XS) {
     padding: padding(L);

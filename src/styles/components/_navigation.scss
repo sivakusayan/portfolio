@@ -10,7 +10,11 @@
 
   background-color: color(white);
   transform: translateX(70%);
-  transition: all 0.2s;
+  transition: all 1s;
+
+  @include bp(M) {
+    transform: translateX(0);
+  }
 
   @include bp(L) {
     width: calc(30rem + 6vw);
@@ -34,6 +38,7 @@
   padding: padding(S);
   
   background-color: color(white);
+  box-shadow: shadow(medium);
 
   &__list {
     height: 100%;

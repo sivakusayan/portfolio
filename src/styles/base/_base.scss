@@ -23,6 +23,16 @@ body {
   letter-spacing: 0.3px;
 }
 
+.site-container {
+  width: 100%;
+  & > .section {
+    transition: all 1s;
+  }
+  &.menu-open > .section {
+    padding-right: 20%;
+  }
+}
+
 h1,
 h2,
 h3,
