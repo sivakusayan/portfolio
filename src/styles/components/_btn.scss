@@ -119,11 +119,3 @@
     transform: scale(1.1);
   }
 }
-
-@include bp(M) {
-  // Make the nav button dissapear, since
-  // the menu will be open by default anyway.
-  .btn--navigation {
-    display: none;
-  }
-}

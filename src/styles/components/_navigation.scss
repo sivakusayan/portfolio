@@ -12,12 +12,10 @@
   transform: translateX(70%);
   transition: all 1s;
 
-  @include bp(M) {
-    transform: translateX(0);
-  }
-
   @include bp(L) {
     width: calc(30rem + 6vw);
+    // Stop hiding menu once screen is big enough
+    transform: translateX(0);
   }
 
   &.hide {

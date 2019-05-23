@@ -56,12 +56,14 @@ class Navigation extends Component {
             `navigation ${isOpen ? 'isOpen' : ''} ${isClickable ? '' : 'hide'}`
           }
         >
-          <button 
-            onClick={this.toggleOpen}
-            className='btn btn--navigation'
-          >
-            <HamburgerIcon isOpen={isOpen}/>
-          </button>
+          {!isDesktop && (
+            <button 
+              onClick={this.toggleOpen}
+              className='btn btn--navigation'
+            >
+              <HamburgerIcon isOpen={isOpen}/>
+            </button>
+          )}
           <Menu onClick={this.toggleOpen} />
         </div>
       </>

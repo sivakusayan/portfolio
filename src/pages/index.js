@@ -46,13 +46,19 @@ class IndexPage extends React.Component {
 
     const windowWidth = window.innerWidth / parseFloat(
       getComputedStyle(
-        document.querySelector('body')
+        document.querySelector('html')
       )['font-size']
     );
-    const isDesktop = windowWidth > (1000/16);
+
+    console.log(windowWidth);
+
+    // Consider breakpoint to be L in SASS variables.
+    const isDesktop = windowWidth >= (1150/(16 * 0.75));
     // Check if values are different so we don't
     // flood the browser with needless updates
     this.setState({ isDesktop });
+
+    console.log(isDesktop);
 
     window.addEventListener('scroll', () => {
       if (!isDesktop) return;
