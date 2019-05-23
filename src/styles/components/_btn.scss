@@ -56,8 +56,17 @@
 
     // Responsively adds and removes text inside button
     .not-small-screens {
+      // Hide on mobile screens
       display: none;
       @include bp(XXS) {
+        display: inline;
+      }
+      
+      // Hide again to make room for automatically shifting menu on right side
+      @include bp(M) {
+        display: none;
+      }
+      @include bp(L) {
         display: inline;
       }
     }
