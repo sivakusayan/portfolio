@@ -8,21 +8,20 @@
   width: calc(30rem + 2vw);
   height: 0;
 
-  background-color: color(white);
   transform: translateX(70%);
-  transition: all 1s;
-
-  @include bp(L) {
-    width: calc(30rem + 6vw);
-    // Stop hiding menu once screen is big enough
-    transform: translateX(0);
-  }
+  transition: all 0.2s;
 
   &.hide {
     transform: translateX(100%);
   }
 
   &.isOpen {
+    transform: translateX(0);
+  }
+
+  @include bp(L) {
+    width: calc(30rem + 6vw);
+    // Stop hiding menu once screen is big enough
     transform: translateX(0);
   }
 }
@@ -37,6 +36,7 @@
   
   background-color: color(white);
   box-shadow: shadow(medium);
+  border-left: 2px solid color(primary);
 
   &__list {
     height: 100%;
