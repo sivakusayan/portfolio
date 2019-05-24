@@ -26,12 +26,16 @@ body {
 .site-container {
   width: 100%;
   & > .section {
-    transition: all 0.2s;
+    padding-left: calc(21rem + 4.2vw);
+    opacity: 0;
+    transform: translateX(calc((-42rem - 4.2vw)));
+    transition: all 0.4s ease-in-out;
   }
   &.menu-open > .section {
     // Match the padding made to the
     // width of the navigation menu
     transform: translateX(calc((-21rem - 4.2vw)));
+    opacity: 1;
   }
 }
 
