@@ -52,12 +52,12 @@
   }
 }
 
-.section:nth-child(odd) {
+.section:nth-child(even) {
   background: darken(color(white), 7%); 
   color: color(primary-dark);
 }
 
-.section:nth-child(even) {
+.section:nth-child(odd) {
   background-color: color(white);
   color: color(primary-dark);
 

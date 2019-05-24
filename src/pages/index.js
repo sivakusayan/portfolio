@@ -64,7 +64,7 @@ class IndexPage extends React.Component {
       if (!isDesktop) return;
       // We want the menu button to come out when user is no longer
       // in the header landing page.
-      const menuIsOpen = (window.scrollY || window.pageYOffset) > window.innerHeight;
+      const menuIsOpen = (window.scrollY || window.pageYOffset) > window.innerHeight * 0.5;
       // Check if values are different so we don't
       // flood the browser with needless updates
       if (menuIsOpen !== this.state.menuIsOpen) {
@@ -76,9 +76,9 @@ class IndexPage extends React.Component {
     const { isDesktop, menuIsOpen } = this.state;
     return (
     <Layout>
+      <Header />
+      <Navigation isDesktop = {isDesktop} />
       <div className={'site-container' + ((isDesktop && menuIsOpen) ? ' menu-open' : '')}>
-        <Header />
-        <Navigation isDesktop = {isDesktop} />
         <Projects />
         <Skills />
         <AboutMe />

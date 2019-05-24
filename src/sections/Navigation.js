@@ -29,6 +29,7 @@ class Navigation extends Component {
       // isOpen.
       const { isDesktop } = this.props;
       if (isDesktop) {
+        const isClickable = (window.scrollY || window.pageYOffset) > window.innerHeight * 0.5;
         this.setState({ isOpen: isClickable })
       }
     })
