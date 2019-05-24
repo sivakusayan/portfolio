@@ -23,17 +23,19 @@ body {
   letter-spacing: 0.3px;
 }
 
-.site-container {
-  width: 100%;
-  padding-right: calc(21rem + 4.2vw);
-  & > .section {
-    opacity: 0;
-    transition: all 0.4s ease-in-out;
-  }
-  &.menu-open > .section {
-    // Match the padding made to the
-    // width of the navigation menu
-    opacity: 1;
+@include bp(L) {
+  .site-container {
+    width: 100%;
+    padding-right: calc(21rem + 4.2vw);
+    & > .section {
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+    }
+    &.menu-open > .section {
+      // Match the padding made to the
+      // width of the navigation menu
+      opacity: 1;
+    }
   }
 }
 
