@@ -52,7 +52,7 @@
     padding: padding(M);
     padding-bottom: 10vh;
 
-    background: darken(color(white), 7%); 
+    background: darken(color(white), 3%); 
 
     @include if-ie() {
       // IE doesn't support space-evenly, so use 
