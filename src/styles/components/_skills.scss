@@ -6,12 +6,23 @@
     margin-bottom: margin(XXS);
 
     font-size: 1.8rem;
+    font-weight: bold;
+
+    @include bp(L) {
+      margin-bottom: 0;
+      margin-right: margin(S);
+    }
   }
 
   &__list {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
+  }
+
+  @include bp(L) {
+    display: flex;
+    align-items: center;
   }
 }
 
