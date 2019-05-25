@@ -74,11 +74,7 @@
     }
 
     @include bp(L) {
-      // Remove icons to make it look more like
-      // a traditional navbar
-      display: flex;
-      justify-content: center;
-      padding-left: 0;
+      padding-left: padding(S);
     }
   }
 
@@ -93,11 +89,7 @@
   &__icon {
     width: 20%;
     margin-right: margin(S);
-    fill: color(grey);
-
-    @include bp(L) {
-      display: none;
-    }
+    fill: currentColor;
   }
 }
 
