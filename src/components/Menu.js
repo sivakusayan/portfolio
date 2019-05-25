@@ -25,7 +25,7 @@ const Menu = ({ onClick }) => (
                   we should lowercase the name of the icons.*/}
               <use xlinkHref={`#${toKebabCase(sectionName)}`} />
             </svg>
-            {sectionName}
+            <span>{sectionName}</span>
           </a>
         </li>
       ))}

@@ -20,7 +20,7 @@
   }
 
   @include bp(L) {
-    width: calc(30rem + 6vw);
+    width: calc(18rem + 6vw);
     // Stop hiding menu once screen is big enough
     transform: translateX(0);
   }
@@ -67,6 +67,14 @@
     @include bp(M) {
       padding-left: padding(M);
     }
+
+    @include bp(L) {
+      // Remove icons to make it look more like
+      // a traditional navbar
+      display: flex;
+      justify-content: center;
+      padding-left: 0;
+    }
   }
 
   @include if-hover() {
@@ -80,6 +88,10 @@
     width: 20%;
     margin-right: margin(S);
     fill: color(primary);
+
+    @include bp(L) {
+      display: none;
+    }
   }
 }
 
