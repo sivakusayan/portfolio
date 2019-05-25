@@ -15,22 +15,25 @@ class Navigation extends Component {
 
   componentDidMount = () => {
     window.addEventListener('scroll', () => {
-      // We want the menu button to come out when user is no longer
-      // in the header landing page.
-      const isClickable = (window.scrollY || window.pageYOffset) > window.innerHeight;
-      // Check if values are different so we don't
-      // flood the browser with needless updates
-      if (isClickable !== this.state.isClickable) {
-        this.setState({ isClickable });
-      }
-
       // On desktops, isOpen and isClickable are equivalent, since
       // there will be no intermediary button to set the menu to 
       // isOpen.
       const { isDesktop } = this.props;
       if (isDesktop) {
         const isClickable = (window.scrollY || window.pageYOffset) > window.innerHeight * 0.5;
-        this.setState({ isOpen: isClickable })
+        this.setState({ 
+          isOpen: isClickable,
+          isClickable,
+        })
+      } else {
+        // We want the menu button to come out when user is no longer
+        // in the header landing page.
+        const isClickable = (window.scrollY || window.pageYOffset) > window.innerHeight;
+        // Check if values are different so we don't
+        // flood the browser with needless updates
+        if (isClickable !== this.state.isClickable) {
+          this.setState({ isClickable });
+        }
       }
     })
   }
