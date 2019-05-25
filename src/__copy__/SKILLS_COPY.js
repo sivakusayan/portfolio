@@ -25,6 +25,7 @@ const SKILLS_COPY = {
   ],
   testing: [
     'Jest',
+    'Mocha',
     'Enzyme',
   ],
   deploy: [

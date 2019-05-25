@@ -9,8 +9,8 @@
     font-weight: bold;
 
     @include bp(L) {
-      margin-bottom: 0;
       margin-right: margin(S);
+      margin-bottom: 0;
     }
   }
 
