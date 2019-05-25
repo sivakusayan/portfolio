@@ -16,6 +16,7 @@ import firebaseIcon from '../assets/svg/firebase.svg';
 
 import jestIcon from '../assets/svg/jest.svg';
 import mochaIcon from '../assets/svg/mocha.svg';
+import jasmineIcon from '../assets/svg/jasmine.svg';
 import enzymeIcon from '../assets/svg/enzyme.svg';
 
 import herokuIcon from '../assets/svg/heroku.svg';
