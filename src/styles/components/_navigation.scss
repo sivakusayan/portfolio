@@ -60,9 +60,14 @@
     padding-left: padding(S);
     border-radius: radius(small);
 
-    color: color(primary);
+    color: color(grey);
+    font-weight: bold;
     text-decoration: none;
     transition: all 0.2s;
+
+    span {
+      color: currentColor;
+    }
 
     @include bp(M) {
       padding-left: padding(M);
@@ -81,13 +86,14 @@
     &__link:hover {
       background-color: darken(color(white), 5%);
       transform: scale(1.05);
+      color: color(primary); 
     }
   }
 
   &__icon {
     width: 20%;
     margin-right: margin(S);
-    fill: color(primary);
+    fill: color(grey);
 
     @include bp(L) {
       display: none;
