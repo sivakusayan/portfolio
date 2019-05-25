@@ -1,5 +1,10 @@
 .skills {
+  padding: padding(S);
   margin-bottom: margin(M);
+
+  background-color: color(white);
+  border-radius: radius(small);
+  box-shadow: shadow(small);
 
   &__category {
     width: 7rem;
@@ -43,13 +48,14 @@
   color: color(black);
 
   @include bp(L) {
-    width: 5.5rem;
-    height: 5.5rem;
+    padding: padding(XS);
+    width: 6rem;
+    height: 6rem;
   }
 
   @include bp(XL) {
-    width: 6rem;
-    height: 6rem;
+    width: 7rem;
+    height: 7rem;
   }
 
   &__name {
