@@ -53,6 +53,9 @@ class ContactForm extends Component {
             className='form'
             onSubmit={this.onSubmit}
           >
+            {/* Need this hidden field to make sure form works
+                https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/#step-2 */}
+            <input type="hidden" name="form-name" value="contact" />
             <InputField
               label='Name'
               type='text'
@@ -61,7 +64,7 @@ class ContactForm extends Component {
             />
             <InputField
               label='Email'
-              type='text'
+              type='email'
               value={email}
               onChange={this.onChangeWrapper('email')}
               invalid={!emailIsValid}
