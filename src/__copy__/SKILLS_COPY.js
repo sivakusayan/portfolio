@@ -21,7 +21,8 @@ const SKILLS_COPY = {
     'Node.js',
     'Express.js',
     'MongoDB',
-    'MySQL'
+    'MySQL',
+    'Firebase',
   ],
   testing: [
     'Jest',

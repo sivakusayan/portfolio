@@ -12,6 +12,7 @@ import nodejsIcon from '../assets/svg/node.js.svg';
 import expressjsIcon from '../assets/svg/express.js.svg';
 import mongodbIcon from '../assets/svg/mongodb.svg';
 import mysqlIcon from '../assets/svg/mysql.svg';
+import firebaseIcon from '../assets/svg/firebase.svg';
 
 import jestIcon from '../assets/svg/jest.svg';
 import mochaIcon from '../assets/svg/mocha.svg';
