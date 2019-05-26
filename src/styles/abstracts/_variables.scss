@@ -68,9 +68,11 @@ $colors: (
 );
 
 $shadows: (
+  small-inset: inset 0 1px 5px rgba(0,0,0,0.2),
   small: 0 1px 5px rgba(0,0,0,0.1),
-  medium: 0 2px 5px rgba(0,0,0,0.2),
-  big: 0 2px 20px rgba(0,0,0,0.18),
+  medium: 0 2px 5px rgba(0,0,0,0.1),
+  big: 0 4px 10px rgba(0,0,0,0.15),
+  huge: 0 2px 15px rgba(0,0,0,0.1),
 );
 
 // For border-radius
