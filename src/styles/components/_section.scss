@@ -37,6 +37,9 @@
     
     // Forms a triangle with CSS. Trick taken from
     // https://css-tricks.com/snippets/css/css-triangle/
+    @include bp(L) {
+      font-size: 5rem;
+    }
     &::before {
       position: absolute;
       display: block;
@@ -48,6 +51,9 @@
       background-color: currentColor;
       border-radius: radius(small);
       content: '';
+      @include bp(L) {
+        width: 25rem;
+      }
     }
   }
 }

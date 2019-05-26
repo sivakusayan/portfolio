@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import 'typeface-pt-sans';
 import 'typeface-pt-sans-narrow';
+import 'typeface-pt-sans';
 
 import '../styles/main.scss';
 
