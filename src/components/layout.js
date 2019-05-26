@@ -23,8 +23,8 @@ const Layout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            { name: 'description', content: 'Sayan Sivakumaran is a developer who makes websites that are fast, responsive, and cross browser compatible. Using technologies like CSS, JavaScript, and React, they can make anything from a static page to a single page application (SPA). ' },
+            { name: 'keywords', content: 'developer, fast, responsive, website' },
           ]}
         >
           <html lang="en" />
