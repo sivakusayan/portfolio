@@ -47,13 +47,6 @@ class Navigation extends Component {
     const { isDesktop } = this.props;
     return (
       <>
-        {/* Darkens screen while navigation menu is open */}
-        {/* Only show overlay on mobile screens, since menu is 
-            always open on desktop. */}
-        <div 
-          className={`overlay ${(isOpen && !isDesktop) ? 'isOpen' : ''}`} 
-          onClick={this.toggleOpen}
-        />
         {/* Actual navigation menu */}
         <div 
           className={
@@ -70,6 +63,13 @@ class Navigation extends Component {
           )}
           <Menu onClick={this.toggleOpen} />
         </div>
+        {/* Darkens screen while navigation menu is open */}
+        {/* Only show overlay on mobile screens, since menu is 
+            always open on desktop. */}
+        <div 
+          className={`overlay ${(isOpen && !isDesktop) ? 'isOpen' : ''}`} 
+          onClick={this.toggleOpen}
+        />
       </>
     )
   }

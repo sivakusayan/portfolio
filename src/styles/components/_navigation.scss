@@ -113,3 +113,12 @@
     pointer-events: initial;
   }
 }
+
+@include bp(L) {
+  .navigation:hover + .overlay {
+    background-color: rgba(color(black), 0.7);
+    // Reenable click interactions so user can click on
+    // background to close the menu
+    pointer-events: initial;
+  }
+}
