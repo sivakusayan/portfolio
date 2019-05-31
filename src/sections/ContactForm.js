@@ -75,13 +75,15 @@ class ContactForm extends Component {
               value={message}
               onChange={this.onChangeWrapper('message')}
             />
-            <button className='btn btn--emphasize' type='submit'>
-              <svg role="img" className='btn__icon'>
-                <title>Send Message</title>
-                <use xlinkHref={`#${contactIcon.id}`} />
-              </svg>
-              <span className='btn__text'>Send</span>
-            </button>
+            <div className="btn-container">
+              <button className='btn btn--emphasize' type='submit'>
+                <svg role="img" className='btn__icon'>
+                  <title>Send Message</title>
+                  <use xlinkHref={`#${contactIcon.id}`} />
+                </svg>
+                <span className='btn__text'>Send</span>
+              </button>
+            </div>
           </form>
         </div>
       </section>

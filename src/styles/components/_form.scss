@@ -9,6 +9,10 @@
   .btn {
     margin-top: margin(XS);
   }
+
+  .btn-container {
+    justify-content: flex-end;
+  }
 }
 
 .field {
