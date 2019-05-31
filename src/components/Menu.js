@@ -20,7 +20,8 @@ const Menu = ({ onClick }) => (
             // on top of page.
             href={`#${toKebabCase(sectionName)}-section`}
           >
-            <svg className='menu__icon'>
+            <svg role="img" className='menu__icon'>
+              <title>Go to {sectionName}</title>
               {/* Remember that according to SKILLS_COPY.js, 
                   we should lowercase the name of the icons.*/}
               <use xlinkHref={`#${toKebabCase(sectionName)}`} />

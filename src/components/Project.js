@@ -32,7 +32,8 @@ const Project = ({
             className='btn'
             href={gitLink}
           >
-            <svg className='btn__icon'>
+            <svg role="img" className='btn__icon'>
+              <title>See source code</title>
               <use xlinkHref={`#${githubIcon.id}`} />
             </svg>
             <p className='btn__text'>
@@ -47,7 +48,8 @@ const Project = ({
             className='btn btn--emphasize'
             href={liveLink}
           >
-            <svg className='btn__icon'>
+            <svg role="img" className='btn__icon'>
+              <title>See live demo</title>
               <use xlinkHref={`#${liveIcon.id}`} />
             </svg>
             <p className='btn__text'>

@@ -76,7 +76,8 @@ class ContactForm extends Component {
               onChange={this.onChangeWrapper('message')}
             />
             <button className='btn btn--emphasize' type='submit'>
-              <svg className='btn__icon'>
+              <svg role="img" className='btn__icon'>
+                <title>Send Message</title>
                 <use xlinkHref={`#${contactIcon.id}`} />
               </svg>
               <span className='btn__text'>Send</span>

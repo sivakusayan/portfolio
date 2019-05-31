@@ -22,7 +22,8 @@ const AboutMe = () => (
           className='btn'
           href={githubLink}
         >
-          <svg className='btn__icon'>
+          <svg role="img" className='btn__icon'>
+            <title>See Github</title>
             <use xlinkHref={`#${githubIcon.id}`} />
           </svg>
           <p className='btn__text'>Github</p>
@@ -33,7 +34,8 @@ const AboutMe = () => (
           className='btn btn--emphasize'
           href={resume}
         >
-          <svg className='btn__icon'>
+          <svg role="img" className='btn__icon'>
+            <title>See Resume</title>
             <use xlinkHref={`#${documentIcon.id}`} />
           </svg>
           <p className='btn__text'>Resume</p>
