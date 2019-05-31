@@ -26,6 +26,16 @@
   }
 }
 
+@include bp(L) {
+  .navigation:hover + .overlay {
+    background-color: rgba(color(black), 0.7);
+  }
+
+  .navigation:hover .menu__link {
+    color: color(grey);
+  }
+}
+
 .menu {
   position: relative;
   z-index: z(top);
@@ -74,12 +84,16 @@
     }
 
     @include bp(L) {
+      color: lighten(color(grey), 10%);
       padding-left: padding(S);
     }
   }
 
   @include if-hover() {
-    &__link:hover {
+    // Add the extra & to temporarily increase specificity.
+    // Otherwise, the link won't change color from hovering it,
+    // and will just change color from hovering over the menu.
+    & &__link:hover {
       background-color: darken(color(white), 5%);
       transform: scale(1.05);
       color: color(primary); 
@@ -107,15 +121,6 @@
   transition: background-color 0.2s;
 
   &.isOpen {
-    background-color: rgba(color(black), 0.7);
-    // Reenable click interactions so user can click on
-    // background to close the menu
-    pointer-events: initial;
-  }
-}
-
-@include bp(L) {
-  .navigation:hover + .overlay {
     background-color: rgba(color(black), 0.7);
     // Reenable click interactions so user can click on
     // background to close the menu
