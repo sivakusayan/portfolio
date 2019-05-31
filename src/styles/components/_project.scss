@@ -89,6 +89,9 @@
 
   &__description {
     font-size: 1.6rem;
-    line-height: 1.5;
+    line-height: 1.25;
+    @include bp(L) {
+      line-height: 1.5;
+    }
   }
 }
