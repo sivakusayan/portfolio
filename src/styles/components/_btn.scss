@@ -22,7 +22,7 @@
 
   background-color: color(white);
   border: 1px solid color(primary);
-  border-radius: radius(small);
+  border-radius: radius(medium-big);
   box-shadow: shadow(medium);
   text-decoration: none;
   transition: all 0.2s;
@@ -75,9 +75,9 @@
 
 @include if-hover() {
   .btn:hover {
-    box-shadow: shadow(big);
+    box-shadow: shadow(medium-big);
     cursor: pointer;
-    transform: translateY(-3%) scale(1.05);
+    transform: translateY(-3%) scale(1.03);
   }
 }
 
