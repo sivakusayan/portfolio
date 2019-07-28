@@ -25,37 +25,35 @@ const Project = ({
     <div className='project__info'>
       <h3 className='project__title'>{title}</h3>
       <h4 className='project__subtitle'>{subtitle}</h4>
-      <div className='project__meta'>
-        <div className='project__links'>
+      <div className='project__links'>
         <a 
-            target='_blank' 
-            rel='noopener noreferrer' 
-            className='link link--external'
-            href={gitLink}
-          >
-            <span className='link__text'>
-              Source Code
-            </span>
-            <svg role="img" className='link__icon'>
-              <title>See source code</title>
-              <use xlinkHref={`#${linkIcon.id}`} />
-            </svg>
-          </a>
-          <a 
-            target='_blank' 
-            rel='noopener noreferrer' 
-            className='link link--external'
-            href={liveLink}
-          >
-            <span className='link__text'>
-              Live Demo
-            </span>
-            <svg role="img" className='link__icon'>
-              <title>See live demo</title>
-              <use xlinkHref={`#${linkIcon.id}`} />
-            </svg>
-          </a>
-        </div>
+          target='_blank' 
+          rel='noopener noreferrer' 
+          className='link link--external'
+          href={gitLink}
+        >
+          <span className='link__text'>
+            Source Code
+          </span>
+          <svg role="img" className='link__icon'>
+            <title>See source code</title>
+            <use xlinkHref={`#${linkIcon.id}`} />
+          </svg>
+        </a>
+        <a 
+          target='_blank' 
+          rel='noopener noreferrer' 
+          className='link link--external'
+          href={liveLink}
+        >
+          <span className='link__text'>
+            Live Demo
+          </span>
+          <svg role="img" className='link__icon'>
+            <title>See live demo</title>
+            <use xlinkHref={`#${linkIcon.id}`} />
+          </svg>
+        </a>
       </div>
       <p className='project__description'>{description}</p>
     </div>

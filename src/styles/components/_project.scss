@@ -70,15 +70,9 @@
     line-height: 1.25;
   }
 
-  &__meta {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin: margin(S) 0;
-  }
-
   &__links {
     display: flex;
+    margin: margin(S) 0;
 
     .link:not(:first-child) { margin-left: 1.5em; }
   }
