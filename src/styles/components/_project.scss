@@ -72,15 +72,15 @@
 
   &__meta {
     display: flex;
-    height: 8rem;
     flex-direction: column;
     justify-content: space-around;
-    margin: margin(XXS) 0;
+    margin: margin(S) 0;
   }
 
   &__links {
     display: flex;
-    justify-content: space-between;
+
+    .link:not(:first-child) { margin-left: 1.5em; }
   }
 
   &__description {

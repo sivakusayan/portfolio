@@ -4,10 +4,42 @@
   color: color(primary-light);
   transition: all 0.2s;
   font-weight: bold;
+  font-size: 1.6rem;
 
   &:hover {
-    box-shadow: 0 3px 0 0 color(primary-light); 
+    box-shadow: 0 3px 0 0 color(primary-light);
+    transform: scale(1.02) translateY(-10%);
   }
+
+  &__icon {
+    width: 1em;
+    height: 1em;
+    margin-left: margin(XS);
+  }
+
+  .not-small-screens {
+    // Hide on mobile screens
+    display: none;
+    @include bp(XXS) {
+      display: inline;
+    }
+    
+    // Hide again to make room for automatically shifting menu on right side
+    @include bp(M) {
+      display: none;
+    }
+    @include bp(L) {
+      display: inline;
+    }
+  }
+}
+
+.link--external {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: padding(XXS);
+  border: none;
+  box-shadow: 0 2px 0 0 darken(color(primary-light), 10%);
 }
 
 .link:visited {

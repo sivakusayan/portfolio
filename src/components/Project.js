@@ -2,6 +2,7 @@ import React from 'react';
 
 import githubIcon from '../assets/svg/github.svg';
 import liveIcon from '../assets/svg/live.svg';
+import linkIcon from '../assets/svg/link.svg';
 import LoadingIcon from './LoadingIcon';
 
 const Project = ({ 
@@ -25,38 +26,34 @@ const Project = ({
       <h3 className='project__title'>{title}</h3>
       <h4 className='project__subtitle'>{subtitle}</h4>
       <div className='project__meta'>
-        <div className='btn-container'>
-          <a 
+        <div className='project__links'>
+        <a 
             target='_blank' 
             rel='noopener noreferrer' 
-            className='btn'
+            className='link link--external'
             href={gitLink}
           >
-            <svg role="img" className='btn__icon'>
+            <span className='link__text'>
+              Source Code
+            </span>
+            <svg role="img" className='link__icon'>
               <title>See source code</title>
-              <use xlinkHref={`#${githubIcon.id}`} />
+              <use xlinkHref={`#${linkIcon.id}`} />
             </svg>
-            <p className='btn__text'>
-              {/* Responsively make text more detailed on bigger
-                  screens. */}
-              <span className='not-small-screens'>Source&nbsp;</span>Code
-            </p>
           </a>
           <a 
             target='_blank' 
             rel='noopener noreferrer' 
-            className='btn btn--emphasize'
+            className='link link--external'
             href={liveLink}
           >
-            <svg role="img" className='btn__icon'>
+            <span className='link__text'>
+              Live Demo
+            </span>
+            <svg role="img" className='link__icon'>
               <title>See live demo</title>
-              <use xlinkHref={`#${liveIcon.id}`} />
+              <use xlinkHref={`#${linkIcon.id}`} />
             </svg>
-            <p className='btn__text'>
-              {/* Responsively make text more detailed on bigger
-                  screens. */}
-              <span className='not-small-screens'>Live&nbsp;</span>Demo
-            </p>
           </a>
         </div>
       </div>
